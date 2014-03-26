@@ -6,10 +6,10 @@ $body: "Open Sans", Verdana, Geneva, sans-serif;
 
 body{
 	font-family: $body;
-	font-size: 14px;
+	font-size: 18px;
 
 	@media (min-width: 768px){
-		font-size: 18px;
+		font-size: 26px;
 	}
 }
 

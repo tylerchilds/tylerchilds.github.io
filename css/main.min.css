@@ -35,10 +35,10 @@ table {
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700,300');
 body {
   font-family: "Open Sans", Verdana, Geneva, sans-serif;
-  font-size: 14px; }
+  font-size: 18px; }
   @media (min-width: 768px) {
     body {
-      font-size: 18px; } }
+      font-size: 26px; } }
 
 h1 {
   font-family: "PT Sans", Futura, "Trebuchet MS", Arial, sans-serif;
