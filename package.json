@@ -13,6 +13,7 @@
     "gulp-sass": "latest",
     "gulp-concat": "latest",
     "gulp-uglify": "latest",
-    "gulp-rename": "latest"
+    "gulp-rename": "latest",
+    "gulp-preprocess": "latest"
   }
 }
