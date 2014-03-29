@@ -35,7 +35,8 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     gulp.src([		
-			'bower_components/jquery/dist/jquery.js'
+			'bower_components/jquery/dist/jquery.js',
+            'src/js/common.js'
 		])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./js'))
@@ -43,7 +44,7 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest('./js'));
     gulp.src([      
-            'src/js/**/*.js'
+            'src/js/static/**/*.js'
         ])
         .pipe(uglify())
         .pipe(gulp.dest('./js'));
@@ -56,6 +57,17 @@ gulp.task('html', function() {
         .pipe(gulp.dest('./'));
 });
 
+// Clean build
+gulp.task('clean', function() {
+    gulp.src([
+            'css',
+            'js',
+            'projects',
+            'index.html'
+        ])
+        .pipe(clean({force: true}));
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['lint', 'scripts']);
@@ -64,4 +76,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'html', 'watch']);
+gulp.task('default', ['clean', 'lint', 'sass', 'scripts', 'html', 'watch']);
