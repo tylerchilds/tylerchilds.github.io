@@ -36,6 +36,8 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
     gulp.src([		
 			'bower_components/jquery/dist/jquery.js',
+            'src/js/Markdown.Converter.js',
+            'src/js/Markdown.Sanitizer.js',
             'src/js/common.js'
 		])
         .pipe(concat('main.js'))
