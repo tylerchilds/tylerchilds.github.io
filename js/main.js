@@ -9109,7 +9109,3 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
-
-$(function(){
-	$('header').fadeIn(1000);
-});
