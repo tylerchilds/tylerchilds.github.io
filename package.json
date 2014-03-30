@@ -16,6 +16,7 @@
     "gulp-minify-css": "latest",
     "gulp-rename": "latest",
     "gulp-preprocess": "latest",
-    "gulp-clean": "latest"
+    "gulp-clean": "latest",
+    "gulp-swig": "latest"
   }
 }

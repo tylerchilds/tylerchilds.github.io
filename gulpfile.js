@@ -1,5 +1,5 @@
 // Include gulp
-var gulp = require('gulp'); 
+var gulp = require('gulp');
 
 // node file system
 var fs = require('fs');
@@ -13,6 +13,11 @@ var minify = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var preprocess = require('gulp-preprocess');
 var clean = require('gulp-clean');
+var swig = require('gulp-swig');
+
+var vars = {
+  load_json: true
+};
 
 // Lint Task
 gulp.task('lint', function() {
@@ -34,7 +39,7 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    gulp.src([		
+    gulp.src([
 			'bower_components/jquery/dist/jquery.js',
             'src/js/Markdown.Converter.js',
             'src/js/Markdown.Sanitizer.js',
@@ -45,7 +50,7 @@ gulp.task('scripts', function() {
         .pipe(rename('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./js'));
-    gulp.src([      
+    gulp.src([
             'src/js/static/**/*.js'
         ])
         .pipe(uglify())
@@ -54,8 +59,15 @@ gulp.task('scripts', function() {
 
 // Concatenate html
 gulp.task('html', function() {
-    gulp.src('src/html/**/*.html')
+    gulp.src(['src/html/**/*.html', 'src/html/**/*.json'])
         .pipe(preprocess())
+        .pipe(gulp.dest('./src/temp'));
+
+});
+
+gulp.task('swig', ['html'], function(){
+    gulp.src('src/temp/**/*.html')
+        .pipe(swig(vars))
         .pipe(gulp.dest('./'));
 });
 
@@ -65,7 +77,8 @@ gulp.task('clean', function() {
             'css',
             'js',
             'projects',
-            'index.html'
+            'index.html',
+            'src/temp'
         ])
         .pipe(clean({force: true}));
 });
@@ -74,8 +87,8 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['lint', 'scripts']);
     gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch('src/html/**/*.html', ['html']);
+    gulp.watch(['src/html/**/*.html', 'src/includes/**/*.html'], ['html', 'swig']);
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'html', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'html', 'swig', 'watch']);
