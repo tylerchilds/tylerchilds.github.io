@@ -1,7 +1,13 @@
-<!-- @include ../../includes/header.html -->
-	<header>
-		<p>Test1</p>
-		<div class="readme" data-src="/tylerchilds/Vanilla-HTML"></div>
-	</header>
-<!-- @include ../../includes/scripts.html -->
-<!-- @include ../../includes/footer.html -->
+{% extends '../../includes/layout.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block css %}
+  {% parent %}
+  <link rel="stylesheet" href="/css/main.css">
+{% endblock %}
+
+{% block content %}
+	<p>Test1</p>
+	<div class="readme" data-src="/tylerchilds/Vanilla-HTML"></div>
+{% endblock %}

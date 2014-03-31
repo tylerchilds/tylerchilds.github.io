@@ -16,7 +16,10 @@ var clean = require('gulp-clean');
 var swig = require('gulp-swig');
 
 var vars = {
-  load_json: true
+  data: {
+    title: "Welcome"
+  },
+  // load_json: true
 };
 
 // Lint Task
@@ -57,16 +60,9 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./js'));
 });
 
-// Concatenate html
-gulp.task('html', function() {
-    gulp.src(['src/html/**/*.html', 'src/html/**/*.json'])
-        .pipe(preprocess())
-        .pipe(gulp.dest('./src/temp'));
-
-});
-
-gulp.task('swig', ['html'], function(){
-    gulp.src('src/temp/**/*.html')
+// Build my awesome templates
+gulp.task('swig', function(){
+    gulp.src('src/html/**/*.html')
         .pipe(swig(vars))
         .pipe(gulp.dest('./'));
 });
@@ -87,8 +83,8 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['lint', 'scripts']);
     gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch(['src/html/**/*.html', 'src/includes/**/*.html'], ['html', 'swig']);
+    gulp.watch(['src/html/**/*.html', 'src/includes/**/*.html'], ['swig']);
 });
 
 // Default Task
-gulp.task('default', ['sass', 'scripts', 'html', 'swig', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'swig', 'watch']);
