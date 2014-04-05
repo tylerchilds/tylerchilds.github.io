@@ -67,6 +67,11 @@ gulp.task('swig', function(){
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('img', function(){
+    gulp.src('src/img/**/*.*')
+        .pipe(gulp.dest('./img'));
+});
+
 // Clean build
 gulp.task('clean', function() {
     gulp.src([
@@ -74,7 +79,7 @@ gulp.task('clean', function() {
             'js',
             'projects',
             'index.html',
-            'src/temp'
+            'img'
         ])
         .pipe(clean({force: true}));
 });
@@ -87,4 +92,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['sass', 'scripts', 'swig', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'swig', 'img', 'watch']);
