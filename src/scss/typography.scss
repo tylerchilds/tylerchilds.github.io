@@ -1,9 +1,10 @@
-// @import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700');
-// @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,400,600,700,300');
+@import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,400,600,700,300");
+@import url("http://fonts.googleapis.com/css?family=PT+Mono");
 
 $heading: "PT Sans", Futura, "Trebuchet MS", Arial, sans-serif;
 $body: "Source Sans Pro", Verdana, Geneva, sans-serif;
-$monospace: monospace;
+$monospace: "PT Mono", monospace;
 
 body{
 	font-family: $body;
@@ -31,6 +32,13 @@ kbd{
 	background-color: $gray6;
 	border: 1px solid $gray5;
 	border-radius: 2px;
+	font-size: $font-size - 2;
+	line-height: $line-height - 2;
+
+	@media screen and (min-width: 768px){
+		font-size: $font-size;
+		line-height: $line-height;
+	}
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -246,7 +254,7 @@ abbr{
 code,
 samp,
 kbd{
-	padding: 0 8px;
+	padding: 0 4px;
 }
 
 sub{

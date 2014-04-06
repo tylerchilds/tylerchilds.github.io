@@ -31,6 +31,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,400,600,700,300");
+@import url("http://fonts.googleapis.com/css?family=PT+Mono");
 body {
   font-family: "Source Sans Pro", Verdana, Geneva, sans-serif;
   color: #3c3c3d;
@@ -47,10 +50,16 @@ h1, h2, h3 {
   font-weight: bold; }
 
 pre, code, samp, kbd {
-  font-family: monospace;
+  font-family: "PT Mono", monospace;
   background-color: #efeff0;
   border: 1px solid #dededf;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 19px; }
+  @media screen and (min-width: 768px) {
+    pre, code, samp, kbd {
+      font-size: 15px;
+      line-height: 21px; } }
 
 h1, h2, h3, h4, h5, h6 {
   padding: 13px 0 21px; }
@@ -195,7 +204,7 @@ dfn, abbr {
   cursor: default; }
 
 code, samp, kbd {
-  padding: 0 8px; }
+  padding: 0 4px; }
 
 sub {
   vertical-align: sub; }
