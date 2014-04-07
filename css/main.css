@@ -82,24 +82,31 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 34px;
+  line-height: 38px;
+  line-height: 40px;
   font-weight: bold; }
 
 h2 {
-  font-size: 28px; }
+  font-size: 28px;
+  line-height: 32px; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 24px;
+  line-height: 28px; }
 
 h4 {
   font-size: 20px;
+  line-height: 24px;
   font-weight: bold; }
 
 h5 {
   font-size: 20px;
+  line-height: 24px;
   font-weight: normal; }
 
 h6 {
   font-size: 20px;
+  line-height: 24px;
   font-style: italic; }
 
 a:link {
@@ -270,7 +277,8 @@ header {
     float: left;
     font-size: 24px;
     padding-right: 13px;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    line-height: 40px; }
     @media screen and (min-width: 768px) {
       header h1 {
         padding-right: 21px; } }
@@ -287,6 +295,7 @@ header {
     font-family: "Source Sans Pro", Verdana, Geneva, sans-serif;
     font-weight: normal;
     font-size: 18px;
+    line-height: 40px;
     margin-right: 21px; }
     @media screen and (min-width: 960px) {
       header .tagline {
@@ -307,7 +316,7 @@ header {
       border-radius: 2px; }
       @media screen and (min-width: 768px) {
         header nav a {
-          padding: 21px 13px; } }
+          padding: 34px 13px; } }
       header nav a.active {
         background-color: #184f74; }
   header a:link {

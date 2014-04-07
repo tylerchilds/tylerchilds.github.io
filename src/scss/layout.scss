@@ -37,6 +37,7 @@ header{
 		font-size: 24px;
 		padding-right: 13px;
 		padding-bottom: 0;
+		line-height: 40px;
 
 		@media screen and (min-width: 768px){
 			padding-right: 21px;
@@ -58,6 +59,7 @@ header{
 		font-family: $body;
 		font-weight: normal;
 		font-size: $font-size +3;
+		line-height: 40px;
 		margin-right: 21px;
 
 		@media screen and (min-width: 960px){
@@ -83,7 +85,7 @@ header{
 			border-radius: 2px;
 
 			@media screen and (min-width: 768px){
-				padding: 21px 13px;
+				padding: 34px 13px;
 			}
 
 			&.active{
