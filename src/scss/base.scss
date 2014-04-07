@@ -41,6 +41,25 @@ kbd{
 	}
 }
 
+code,
+samp,
+kbd{
+	padding: 0 4px;
+}
+
+pre{
+	padding: 8px;
+
+	code,
+	samp,
+	kbd{
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		padding: 0;
+	}
+}
+
 h1, h2, h3, h4, h5, h6{
 	padding: 13px 0 21px;
 
@@ -83,7 +102,7 @@ h6{
 
 a:link{
 	color: $blue;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:visited{
@@ -133,10 +152,6 @@ hr{
 	border-bottom: 1px solid $gray6;
 	border-left: none;
 	border-right: none;
-}
-
-pre{
-	padding: 8px;
 }
 
 blockquote{
@@ -249,12 +264,6 @@ dfn,
 abbr{
 	border-bottom: 1px dotted $gray3;
 	cursor: default;
-}
-
-code,
-samp,
-kbd{
-	padding: 0 4px;
 }
 
 sub{

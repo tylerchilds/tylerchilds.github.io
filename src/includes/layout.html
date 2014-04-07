@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{% block title %}My Site{% endblock %}</title>
+	<title>{% block title %}Tyler Childs - A Web Developer &amp; Graphic Designer{% endblock %}</title>
 
 	{% block css %}
 		<link rel="stylesheet" href="/css/main.min.css">
@@ -16,18 +16,29 @@
 	{% block page %}
 		<header>
 			<h1><a href="/"><img src="/img/branding/logo.png" />Tyler Childs</a></h1>
-			<p class="tagline">A Web Developer &amp; Designer</p>
+			<h2 class="tagline">A Web Developer &amp; Designer</h2>
 			<nav>
-				<a href="/about">About</a>
-				<a href="/styleguide">Styleguide</a>
-				<a href="/projects">Projects</a>
+				<!-- Use the blocks below to add the active class to highlight the current page-->
+				<a href="/personal" {% block personal %}{% endblock %}>Personal</a>
+				<a href="/projects" {% block projects %}{% endblock %}>Projects</a>
+				<a href="/styleguide" {% block styleguide %}{% endblock %}>Styleguide</a>
 			</nav>
 		</header>
-		<div id="wrapper">
+		<div class="wrapper">
 			
 			{% block content %}{% endblock %}
 
 		</div>
+		<footer class="wrapper">
+			<div class="links">
+				<a href="http://www.linkedin.com/tylerchilds" target="_blank">LinkedIn</a> .
+				<a href="http://www.twitter.com/tylerchilds" target="_blank">Twitter</a> .
+				<a href="http://www.instagram.com/tylerchilds" target="_blank">Instagram</a> .
+				<a href="http://www.github.com/tylerchilds" target="_blank">Github</a> .
+				<a href="#" target="_blank">Codeeval</a>
+			</div>
+			<div class="copyright">&copy; Tyler Childs 2009-2014</div>
+		</footer>
 	{% endblock %}
 	{% block scripts %}
 		<script src="/js/main.js"></script>

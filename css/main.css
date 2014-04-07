@@ -61,6 +61,17 @@ pre, code, samp, kbd {
       font-size: 15px;
       line-height: 21px; } }
 
+code, samp, kbd {
+  padding: 0 4px; }
+
+pre {
+  padding: 8px; }
+  pre code, pre samp, pre kbd {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   padding: 13px 0 21px; }
   @media screen and (min-width: 768px) {
@@ -93,7 +104,7 @@ h6 {
 
 a:link {
   color: #216a9e;
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:visited {
   color: purple; }
@@ -124,9 +135,6 @@ hr {
   border-bottom: 1px solid #efeff0;
   border-left: none;
   border-right: none; }
-
-pre {
-  padding: 8px; }
 
 blockquote {
   margin-left: 13px;
@@ -203,9 +211,6 @@ dfn, abbr {
   border-bottom: 1px dotted #7d7d7e;
   cursor: default; }
 
-code, samp, kbd {
-  padding: 0 4px; }
-
 sub {
   vertical-align: sub; }
 
@@ -233,15 +238,34 @@ table {
     table tfoot td {
       text-align: center; }
 
+html {
+  height: 100%; }
+
+body {
+  position: relative;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 100%; }
+
 header {
   background-color: #216a9e;
   color: #fff;
   padding: 13px;
   line-height: 40px;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
+  @media screen and (min-width: 550px) {
+    header {
+      text-align: right; } }
   @media screen and (min-width: 768px) {
     header {
       padding: 13px 21px; } }
+  @media screen and (min-width: 960px) {
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0; } }
   header h1 {
     float: left;
     font-size: 24px;
@@ -258,28 +282,34 @@ header {
   header .tagline {
     display: none;
     float: left;
-    padding-bottom: 0; }
-    @media screen and (min-width: 800px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "Source Sans Pro", Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    margin-right: 21px; }
+    @media screen and (min-width: 960px) {
       header .tagline {
         display: inline-block; } }
   header nav {
     letter-spacing: 2px;
     text-transform: uppercase;
-    display: table;
+    display: inline-block;
     margin: 0 auto;
     clear: both; }
-    header nav a {
-      padding-right: 13px; }
-      @media screen and (min-width: 768px) {
-        header nav a {
-          padding-right: 21px; } }
-      header nav a:last-child {
-        padding-right: 0px; }
     @media screen and (min-width: 768px) {
       header nav {
         float: right;
         display: block;
         clear: none; } }
+    header nav a {
+      padding: 5px 8px;
+      border-radius: 2px; }
+      @media screen and (min-width: 768px) {
+        header nav a {
+          padding: 21px 13px; } }
+      header nav a.active {
+        background-color: #184f74; }
   header a:link {
     color: #fff;
     text-decoration: none; }
@@ -290,15 +320,28 @@ header {
   header a:active {
     color: #fff; }
 
-#wrapper {
+.wrapper {
   padding: 34px 21px; }
   @media screen and (min-width: 768px) {
-    #wrapper {
+    .wrapper {
       padding: 55px 34px; } }
 
 .page {
   max-width: 960px;
   margin: 0 auto; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden; }
+  footer .links {
+    float: left; }
+  footer .copyright {
+    float: right; }
 
 .page#home header {
   display: none; }
