@@ -78,6 +78,9 @@ gulp.task('clean', function() {
             'css',
             'js',
             'projects',
+            'styleguide',
+            'about',
+            'personal',
             'index.html',
             'img'
         ])
@@ -88,7 +91,7 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
     gulp.watch('src/js/*.js', ['lint', 'scripts']);
     gulp.watch('src/scss/*.scss', ['sass']);
-    gulp.watch(['src/html/**/*.html', 'src/includes/**/*.html'], ['swig']);
+    gulp.watch('src/html/**/*.html', ['swig']);
 });
 
 // Default Task

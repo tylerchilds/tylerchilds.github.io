@@ -253,6 +253,9 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   min-height: 100%; }
+  @media screen and (min-width: 960px) {
+    body {
+      padding-top: 50px; } }
 
 header {
   background-color: #216a9e;
