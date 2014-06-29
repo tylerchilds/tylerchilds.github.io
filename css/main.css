@@ -132,3 +132,76 @@ footer {
   margin-bottom: 30px; }
   .page#home header {
     display: none; }
+
+.example-wrapper {
+  border: 1px solid #dededf;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: visible; }
+  .example-wrapper .example {
+    padding: 40px 20px 20px 20px;
+    position: relative; }
+    .example-wrapper .example:before {
+      content: "example";
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      position: absolute;
+      left: 10px;
+      top: 10px; }
+  .example-wrapper .code {
+    padding: 0px 20px;
+    border-top: 1px solid #dededf;
+    background-color: #272822;
+    overflow: auto;
+    display: none; }
+    .example-wrapper .code xmp {
+      margin: 0; }
+    .example-wrapper .code .pln {
+      color: #fff; }
+    .example-wrapper .code .lit {
+      color: #fff; }
+    .example-wrapper .code .tag {
+      color: #f12749; }
+    .example-wrapper .code .atv, .example-wrapper .code .str {
+      color: #e6db6b; }
+    .example-wrapper .code .atn {
+      color: #a6da2a; }
+    .example-wrapper .code .com {
+      color: #3c3c3d; }
+    .example-wrapper .code .pun {
+      color: #fff; }
+    .example-wrapper .code .kwd {
+      color: #79cdcd; }
+    .example-wrapper .code .typ {
+      color: #fff; }
+  .example-wrapper .code-toggle {
+    padding: 8px;
+    text-align: center;
+    background-color: #efeff0;
+    cursor: pointer; }
+    .example-wrapper .code-toggle:hover {
+      background-color: #dededf; }
+    .example-wrapper .code-toggle:before {
+      content: 'Show Code'; }
+    .example-wrapper .code-toggle.active:before {
+      content: 'Hide Code'; }
+
+.example-wrapper {
+  margin-bottom: 34px; }
+  @media screen and (min-width: 768px) {
+    .example-wrapper {
+      margin-bottom: 55px; } }
+  .example-wrapper .cell {
+    color: #fff;
+    background-color: #2a89c8; }
+    .example-wrapper .cell:nth-child(even) {
+      background-color: #216a9e; }
+
+.alignment-grid {
+  height: 100px; }
+
+.grid-system {
+  text-align: center; }
+  .grid-system .mosaic-row {
+    margin-bottom: 10px; }

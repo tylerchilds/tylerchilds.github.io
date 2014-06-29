@@ -1,0 +1,29 @@
+@import 'pretty_print';
+
+.example-wrapper{
+  margin-bottom: 34px;
+
+  @media screen and (min-width: 768px){
+    margin-bottom: 55px;
+  }
+  .cell{
+    color: #fff;
+    background-color: $blue-light;
+
+    &:nth-child(even){
+      background-color: $blue;
+    }
+  }
+}
+
+.alignment-grid{
+	height: 100px;
+}
+
+.grid-system{
+	text-align: center;
+
+  .mosaic-row{
+    margin-bottom: 10px;
+  }
+}
