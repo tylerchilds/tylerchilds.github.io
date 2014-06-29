@@ -2,9 +2,18 @@
 
 {% block title %}Tyler Childs | Projects - Base Stylesheet{% endblock %}
 
-<!-- {% block projects %}class="active"{% endblock %} -->
+{% block projects %}class="active"{% endblock %}
 
 {% block content %}
+  <div class="mosaic-row center collapse-767 button-container">
+    <div class="cell cell-5 middle">
+      <a href="/base-stylesheet" class="button">View Project</a>
+    </div>
+    <div class="cell cell-5 middle">
+      <a href="https://github.com/tylerchilds/base-stylesheet" class="button" target="_blank">Fork on Github</a>
+    </div>
+  </div>
+
 	<div class="page" id="base-stylesheet">
 		<h2>Sections <a href="#">Linked</a></h2>
     <p>The main page header of this guide is an <code>h1</code> element. Any header elements may include links, as depicted in the example.</p>
@@ -365,4 +374,13 @@ p q r s t u v w x y z { | } ~</pre>
       </table>
     </div>
 	</div>
+
+  <div class="mosaic-row center collapse-767 button-container">
+    <div class="cell cell-5 middle">
+      <a href="/base-stylesheet" class="button">View Project</a>
+    </div>
+    <div class="cell cell-5 middle">
+      <a href="https://github.com/tylerchilds/base-stylesheet" class="button" target="_blank">Fork on Github</a>
+    </div>
+  </div>
 {% endblock %}

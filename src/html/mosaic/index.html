@@ -2,18 +2,30 @@
 
 {% block title %}Tyler Childs | Projects - Mosaic Grid System{% endblock %}
 
-<!-- {% block projects %}class="active"{% endblock %} -->
+{% block projects %}class="active"{% endblock %}
 
 {% block content %}
 	<div class="page" id="mosaic">
     <div class="mosaic-row center collapse-767 button-container">
       <div class="cell cell-5 middle">
-        <a href="#" class="button">View Demo</a>
+        <a href="demo.html" class="button">View Demo</a>
       </div>
       <div class="cell cell-5 middle">
-        <a href="#" class="button">Fork on Github</a>
+        <a href="https://github.com/tylerchilds/mosaic" class="button" target="_blank">Fork on Github</a>
       </div>
     </div>
+
+
     <div class="readme" data-src="/tylerchilds/mosaic"></div>
+
+
+    <div class="mosaic-row center collapse-767 button-container">
+      <div class="cell cell-5 middle">
+        <a href="demo.html" class="button">View Demo</a>
+      </div>
+      <div class="cell cell-5 middle">
+        <a href="https://github.com/tylerchilds/mosaic" class="button" target="_blank">Fork on Github</a>
+      </div>
+    </div>
 	</div><!-- ending the #mosaic.page -->
 {% endblock %}

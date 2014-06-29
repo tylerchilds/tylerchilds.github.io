@@ -74,8 +74,6 @@ header {
       @media screen and (min-width: 768px) {
         header nav a {
           padding: 34px 13px; } }
-      header nav a.active {
-        background-color: #184f74; }
   header a:link {
     color: #fff;
     text-decoration: none; }
@@ -95,6 +93,9 @@ header {
 .page {
   max-width: 960px;
   margin: 0 auto; }
+
+.readme {
+  margin-bottom: 30px; }
 
 .button-container .cell {
   padding: 0 10px;
@@ -127,5 +128,7 @@ footer {
   footer .copyright {
     float: right; }
 
-.page#home header {
-  display: none; }
+.page {
+  margin-bottom: 30px; }
+  .page#home header {
+    display: none; }
