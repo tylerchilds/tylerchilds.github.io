@@ -67,6 +67,14 @@ gulp.task('swig', function(){
         .pipe(gulp.dest('./'));
 });
 
+// Move vendor files to dest
+gulp.task('vendor', function(){
+    var stream = gulp.src('src/vendor/**/*.*')
+        .pipe(gulp.dest('./'));
+
+    return stream;
+});
+
 gulp.task('img', function(){
     gulp.src('src/img/**/*.*')
         .pipe(gulp.dest('./img'));
@@ -77,10 +85,9 @@ gulp.task('clean', function() {
     gulp.src([
             'css',
             'js',
-            'projects',
-            'styleguide',
-            'about',
-            'personal',
+            'base-stylesheet',
+            'mosaic',
+            'vanilla-html',
             'index.html',
             'img'
         ])
@@ -95,4 +102,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['sass', 'scripts', 'swig', 'img', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'swig', 'vendor', 'img', 'watch']);

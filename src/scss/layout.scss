@@ -34,6 +34,7 @@ header{
 		top: 0;
 		right: 0;
 		left: 0;
+		z-index: 2;
 	}
 
 	h1{
@@ -130,6 +131,34 @@ header{
 .page{
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+.button-container{
+	.cell{
+    padding: 0 10px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px){
+      padding: 0 20px 20px;
+    }
+  }
+
+	.button{
+		text-decoration: none;
+    display: block;
+    padding: 13px;
+    background-color: $orange;
+    font-size: 1.7rem;
+    font-weight: bold;
+
+    &:link, &:visited, &:hover, &:focus{
+      color: #fff;
+    }
+
+    &:hover{
+      background-color: darken($orange, 2%);
+    }
+	}
 }
 
 footer{

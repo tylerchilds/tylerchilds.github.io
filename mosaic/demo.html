@@ -1,0 +1,449 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Tyler Childs | Projects - Mosaic Grid System</title>
+
+	
+	<link rel="stylesheet" href="/css/base.min.css">
+	<link rel="stylesheet" href="/css/mosaic.min.css">
+		<link rel="stylesheet" href="/css/main.min.css">
+	
+</head>
+
+<body>
+	
+		<header>
+			<h1><a href="/"><img src="/img/branding/logo.png" />Tyler Childs</a></h1>
+			<h2 class="tagline">A Web Developer &amp; Designer</h2>
+<!-- 			<nav>
+				<a href="/personal" >Personal</a>
+				<a href="/projects" class="active">Projects</a>
+			</nav> -->
+		</header>
+		<div class="wrapper">
+			
+			
+	<div class="page" id="mosaic">
+		<div class="mosaic-row center stack-767 button-container">
+    <div class="cell cell-4 middle">
+      <a href="https://raw.githubusercontent.com/tylerchilds/mosaic/master/src/scss/mosaic.scss" class="button">Download Mosaic SCSS</a>
+    </div>
+    <div class="cell cell-4 middle">
+      <a href="https://raw.githubusercontent.com/tylerchilds/mosaic/master/mosaic.min.css" class="button">Download Mosaic CSS</a>
+    </div>
+    <div class="cell cell-4 middle">
+      <a href="https://github.com/tylerchilds/mosaic" class="button">Fork me on Github</a>
+    </div>
+  </div>
+
+  <h3>Basic layout</h3>
+  <p>
+    Start out with a <code>&lt;div class="mosaic-row"&gt;&lt;/div&gt;</code> and nest three children with <code>class="cell cell-4"</code>. The grid system is based on the classes <code>.cell-undefined</code>, where undefined is a value 1-12, but you don't have to use the built-in grid. However, a width needs to be set on <code>.cell</code> elements for the alignment properties to apply.
+  </p>
+
+  <section class="example-wrapper">
+    <section class="example"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row">
+  <div class="cell cell-4">
+    First
+  </div>
+  <div class="cell cell-4">
+    Middle
+  </div>
+  <div class="cell cell-4">
+    Last
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+
+  <h3>Reversed Rows</h3>
+  <p>
+    To reverse a row, simply add <code>class="reverse"</code> to a <code>.mosaic-row</code>
+  </p>
+
+  <section class="example-wrapper">
+    <section class="example"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row reverse">
+  <div class="cell cell-4">
+    First
+  </div>
+  <div class="cell cell-4">
+    Middle
+  </div>
+  <div class="cell cell-4">
+    Last
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+
+  <h3>Responsive Rows</h3>
+  <p>
+    Cells in a row can be stacked at various viewport thresholds to optimize layouts responsively. Just add <code>class="stack-undefined"</code>, where undefined by default is 480, 767, and 960.
+  </p>
+
+  <section class="example-wrapper">
+    <section class="example grid-system"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row stack-960">
+  <div class="cell cell-6">
+    Stack
+  </div>
+  <div class="cell cell-6">
+    at 960.
+  </div>
+</div>
+
+<div class="mosaic-row stack-767">
+  <div class="cell cell-6">
+    Stack
+  </div>
+  <div class="cell cell-6">
+    at 767.
+  </div>
+</div>
+
+<div class="mosaic-row stack-480">
+  <div class="cell cell-6">
+    Stack
+  </div>
+  <div class="cell cell-6">
+    at 480.
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+
+	<h3>Alignment</h3>
+	<p>
+    Cells can be horizontally aligned by adding <code>.left</code>, <code>.center</code>, or <code>.right</code> on to a <code>.mosaic-row</code>
+  </p>
+	<p>
+    Cells can be vertically aligned by adding <code>.top</code>, <code>.middle</code>, or <code>.bottom</code> to a <code>.cell</code>. The horizontal alignment classes can also be applied to a <code>.cell</code>.
+  </p>
+
+  <section class="example-wrapper">
+    <section class="example"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row alignment-grid">
+  <div class="cell cell-4 top">
+    left top
+  </div>
+  <div class="cell cell-4 middle">
+    left middle
+  </div>
+  <div class="cell cell-4 bottom">
+    left bottom
+  </div>
+</div>
+<div class="mosaic-row alignment-grid center">
+  <div class="cell cell-4 top">
+    center top
+  </div>
+  <div class="cell cell-4 middle">
+    center middle
+  </div>
+  <div class="cell cell-4 bottom">
+    center bottom
+  </div>
+</div>
+<div class="mosaic-row alignment-grid right">
+  <div class="cell cell-4 top">
+    right top
+  </div>
+  <div class="cell cell-4 middle">
+    right middle
+  </div>
+  <div class="cell cell-4 bottom">
+    right bottom
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+
+
+  <h3>Grid System</h3>
+  <p>
+    The fluid grid is a standard 12-column grid layout. The grid system does not need to be used, any widths added to a <code>.cell</code> will work fine, however, <strong>a width must be defined for mosaic to work properly</strong>.
+  </p>
+  <section class="example-wrapper">
+    <section class="example grid-system"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row center">
+  <div class="cell cell-12">
+    12
+  </div>
+</div>
+
+<div class="mosaic-row center">
+  <div class="cell cell-6">
+    6
+  </div>
+  <div class="cell cell-6">
+    6
+  </div>
+</div>
+
+<div class="mosaic-row center">
+  <div class="cell cell-4">
+    4
+  </div>
+  <div class="cell cell-4">
+    4
+  </div>
+  <div class="cell cell-4">
+    4
+  </div>
+</div>
+
+<div class="mosaic-row center">
+  <div class="cell cell-3">
+    3
+  </div>
+  <div class="cell cell-3">
+    3
+  </div>
+  <div class="cell cell-3">
+    3
+  </div>
+  <div class="cell cell-3">
+    3
+  </div>
+</div>
+
+<div class="mosaic-row center">
+  <div class="cell cell-2">
+    2
+  </div>
+  <div class="cell cell-2">
+    2
+  </div>
+  <div class="cell cell-2">
+    2
+  </div>
+  <div class="cell cell-2">
+    2
+  </div>
+  <div class="cell cell-2">
+    2
+  </div>
+  <div class="cell cell-2">
+    2
+  </div>
+</div>
+
+<div class="mosaic-row center">
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+  <div class="cell cell-1">
+    1
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+
+
+  <h3>Mixed Fixed/Fluid Columns</h3>
+  <p>
+    Fluid cells are able to contain fixed sized cells. Fixed cells can be positioned on either side of their shared fluid cell. Cells can be given a fixed width with <code>.fixed-undefined</code>, where undefined by default is a multiple of 25 less than 400. Fluid cells can contain fixed cells by adding <code>.contain-undefined-</code>, where undefined is the width of the fixed column to be contained and  is "left" or "right", the side on which the fixed element is located.
+  </p>
+  <section class="example-wrapper">
+    <section class="example grid-system"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row stack-480">
+  <div class="cell fixed-200">
+    fixed
+  </div>
+  <div class="cell cell-12 contain-200-left">
+    100% shared left
+  </div>
+</div>
+
+<div class="mosaic-row stack-480">
+  <div class="cell cell-12 contain-200-right">
+    100% shared right
+  </div>
+  <div class="cell fixed-200">
+    fixed
+  </div>
+</div>
+
+<div class="mosaic-row stack-767">
+  <div class="cell fixed-100">
+    1
+  </div>
+  <div class="cell cell-6 contain-100-left contain-100-right">
+    2
+  </div>
+  <div class="cell fixed-100">
+    3
+  </div>
+  <div class="cell cell-6 contain-200-right">
+    4
+  </div>
+  <div class="cell fixed-200">
+    5
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+
+  <h3>Push, Pull, &amp; More</h3>
+  <p>
+    Because cells are not floated, pushing and pulling may not have expected results. To pull/push add <code>.pull-undefined</code> or <code>.push-undefined</code>, where undefined is a value 1-12. To align cells in their row, alignment classes also can be used if the row does not add up to 12.
+  </p>
+
+  <section class="example-wrapper">
+    <section class="example grid-system"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row">
+  <div class="cell cell-4">
+    First
+  </div>
+  <div class="cell cell-4 push-4">
+    Last
+  </div>
+</div>
+
+<div class="mosaic-row reverse">
+  <div class="cell cell-4">
+    First
+  </div>
+  <div class="cell cell-4 pull-4">
+    Last
+  </div>
+</div>
+
+<div class="mosaic-row center reverse">
+  <div class="cell cell-6">
+    Centered
+  </div>
+</div>
+
+<div class="mosaic-row right reverse">
+  <div class="cell cell-6 left">
+    Right aligned, text left
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+
+  <h3>Nesting</h3>
+  <p>
+    Mosaic Rows can be nested inside cells, allowing for a variety of layout posibilities.
+  </p>
+
+  <section class="example-wrapper">
+    <section class="example"></section>
+
+    <section class="code">
+      <xmp class="prettyprint">
+<div class="mosaic-row stack-480">
+  <div class="cell fixed-100 middle">
+    1
+  </div>
+  <div class="cell cell-12 middle contain-100-left">
+    <div class="mosaic-row middle stack-767">
+      <div class="cell middle cell-6">
+        <div class="mosaic-row center stack-960">
+          <div class="cell cell-8">3</div>
+        </div>
+      </div>
+      <div class="cell middle cell-6">
+        2
+      </div>
+    </div>
+  </div>
+</div>
+      </xmp>
+    </section>
+    <aside class="code-toggle"></aside>
+  </section>
+	
+
+	</div><!-- ending the #mosaic.page -->
+
+
+		</div>
+		<footer class="wrapper">
+			<div class="links">
+				<a href="http://www.linkedin.com/tylerchilds" target="_blank">LinkedIn</a> .
+				<a href="http://www.twitter.com/tylerchilds" target="_blank">Twitter</a> .
+				<a href="http://www.instagram.com/tylerchilds" target="_blank">Instagram</a> .
+				<a href="http://www.github.com/tylerchilds" target="_blank">Github</a> .
+				<a href="http://www.codeeval.com/profile/tylerchilds/" target="_blank">Codeeval</a>
+			</div>
+			<div class="copyright">&copy; Tyler Childs 2009-2014</div>
+		</footer>
+	
+	
+		<script src="/js/main.js"></script>
+	
+</body>
+</html>

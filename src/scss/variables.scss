@@ -2,6 +2,8 @@ $blue: #216a9e;
 $blue-dark: darken($blue, 10%);
 $blue-light: lighten($blue, 10%);
 
+$orange: #D15017;
+
 $red: red;
 $green: green;
 $yellow: yellow;
@@ -23,3 +25,7 @@ $gray6: #efeff0;
 
 $font-size: 15px;
 $line-height: 21px;
+
+$heading: "PT Sans", Futura, "Trebuchet MS", Arial, sans-serif;
+$body: "Source Sans Pro", Verdana, Geneva, sans-serif;
+$monospace: "PT Mono", monospace;
