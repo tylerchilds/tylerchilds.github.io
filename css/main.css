@@ -84,6 +84,32 @@ header {
   header a:active {
     color: #fff; }
 
+.hero {
+  height: 300px;
+  background: url('/img/branding/self.jpg') no-repeat 5% bottom;
+  position: relative;
+  z-index: 1; }
+  @media screen and (max-width: 767px) {
+    .hero {
+      background: url('/img/branding/shirt.jpg') no-repeat center bottom; }
+      .hero .cell {
+        text-align: center !important; } }
+  .hero:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: ''; }
+  .hero * {
+    position: relative;
+    z-index: 2;
+    color: #fff; }
+  .hero p {
+    font-size: 1.8rem; }
+
 .wrapper {
   padding: 34px 21px; }
   @media screen and (min-width: 768px) {
@@ -104,15 +130,19 @@ header {
     .button-container .cell {
       padding: 0 20px 20px; } }
 .button-container .button {
-  text-decoration: none;
   display: block;
-  padding: 13px;
+  padding: 13px; }
+
+.button {
+  display: inline-block;
+  padding: 13px 34px;
   background-color: #D15017;
   font-size: 1.7rem;
   font-weight: bold; }
-  .button-container .button:link, .button-container .button:visited, .button-container .button:hover, .button-container .button:focus {
+  .button:link, .button:visited, .button:hover, .button:focus {
+    text-decoration: none;
     color: #fff; }
-  .button-container .button:hover {
+  .button:hover {
     background-color: #c84b16; }
 
 footer {
@@ -132,6 +162,12 @@ footer {
   margin-bottom: 30px; }
   .page#home header {
     display: none; }
+  @media screen and (max-width: 767px) {
+    .page#home .projects .cell {
+      padding-bottom: 34px; } }
+  .page#home .project-links {
+    font-size: 1.2em;
+    padding-top: 10px; }
 
 .example-wrapper {
   border: 1px solid #dededf;

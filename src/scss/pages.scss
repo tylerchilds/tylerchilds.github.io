@@ -5,5 +5,18 @@
 		header{
 			display: none;
 		}
+
+		.projects{
+			.cell{
+				@media screen and (max-width: 767px){
+					padding-bottom: 34px;
+				}
+			}
+		}
+
+		.project-links{
+			font-size: 1.2em;
+			padding-top: 10px;
+		}
 	}
 }

@@ -4,6 +4,11 @@
 
 {% block projects %}class="active"{% endblock %}
 
+{% block hero-text %}
+  <h2>Mosaic Grid System</h2>
+  <p>Pure CSS grid system for vertical alignment and mixed fixed/fluid columns</p>
+{% endblock %}
+
 {% block content %}
 
 	<div class="page" id="mosaic">
@@ -330,9 +335,9 @@
     <aside class="code-toggle"></aside>
   </section>
 
-  <h3>Push, Pull, &amp; More</h3>
+  <h3>Push &amp; More</h3>
   <p>
-    Because cells are not floated, pushing and pulling may not have expected results. To pull/push add <code>.pull-{{#}}</code> or <code>.push-{{#}}</code>, where {{#}} is a value 1-12. To align cells in their row, alignment classes also can be used if the row does not add up to 12.
+    Because elements are not floated, push/pull classes may seem like they have unexpected results. To push/pull add <code>.push-{{#}}</code> or <code>pull-{{#}}</code>, where {{#}} is a value 1-12. To align cells in their row, alignment classes also can be used if the row does not add up to 12.
   </p>
 
   <section class="example-wrapper">
@@ -342,19 +347,16 @@
       <xmp class="prettyprint">
 <div class="mosaic-row">
   <div class="cell cell-4">
-    First
+    Normal
   </div>
   <div class="cell cell-4 push-4">
-    Last
+    Pushed
   </div>
 </div>
 
-<div class="mosaic-row reverse">
-  <div class="cell cell-4">
-    First
-  </div>
-  <div class="cell cell-4 pull-4">
-    Last
+<div class="mosaic-row right">
+  <div class="cell cell-9 pull-1 left">
+    Pulled, text left
   </div>
 </div>
 
