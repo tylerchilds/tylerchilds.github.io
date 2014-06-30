@@ -150,10 +150,6 @@ footer {
   max-width: 960px;
   margin: 0 auto;
   overflow: hidden; }
-  footer .links {
-    float: left; }
-  footer .copyright {
-    float: right; }
 
 .page {
   margin-bottom: 30px; }
