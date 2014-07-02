@@ -92,6 +92,16 @@ header {
       background: url('/img/branding/shirt.jpg') no-repeat center bottom; }
       .hero .cell {
         text-align: center !important; } }
+  @media screen and (max-width: 767px) {
+    .hero:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.75);
+      content: ''; } }
   .hero * {
     position: relative;
     z-index: 2;
