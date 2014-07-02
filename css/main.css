@@ -105,7 +105,6 @@ header {
   .hero * {
     position: relative;
     z-index: 2;
-    color: #fff;
     color: #3c3c3d; }
   .hero p {
     font-size: 1.8rem; }
