@@ -101,7 +101,8 @@ header {
       right: 0;
       z-index: 1;
       background-color: rgba(255, 255, 255, 0.75);
-      content: ''; } }
+      content: ''; }
+ }
   .hero * {
     position: relative;
     z-index: 2;
@@ -142,7 +143,7 @@ header {
     text-decoration: none;
     color: #fff; }
   .button:hover {
-    background-color: #c84b16; }
+    background-color: #c84c16; }
 
 footer {
   position: absolute;
@@ -225,7 +226,7 @@ footer {
       margin-bottom: 55px; } }
   .example-wrapper .cell {
     color: #fff;
-    background-color: #2a89c8; }
+    background-color: #2a86c8; }
     .example-wrapper .cell:nth-child(even) {
       background-color: #216a9e; }
 
