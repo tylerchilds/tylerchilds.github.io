@@ -31,7 +31,12 @@ gulp.task('lint', function() {
 
 // Compile Our Sass
 gulp.task('sass', function() {
-    gulp.src('src/scss/import.scss')
+    gulp.src('src/scss/bingo.scss')
+        .pipe(sass())
+        //.pipe(minify())
+        .pipe(gulp.dest('./css'));
+
+    return gulp.src('src/scss/import.scss')
         .pipe(sass())
         .pipe(rename('main.css'))
         .pipe(gulp.dest('./css'))
@@ -62,7 +67,7 @@ gulp.task('scripts', function() {
 
 // Build my awesome templates
 gulp.task('swig', function(){
-    gulp.src('src/html/**/*.html')
+    return gulp.src('src/html/**/*.html')
         .pipe(swig(vars))
         .pipe(gulp.dest('./'));
 });
@@ -89,6 +94,7 @@ gulp.task('clean', function() {
             'mosaic',
             'vanilla-html',
             'index.html',
+            'bingo',
             'img'
         ])
         .pipe(clean({force: true}));

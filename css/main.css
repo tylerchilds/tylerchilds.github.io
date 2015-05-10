@@ -76,20 +76,21 @@ header {
     text-decoration: none; }
   header a:visited {
     color: #fff; }
-  header a:hover, header a:focus {
+  header a:hover,
+  header a:focus {
     color: #dededf; }
   header a:active {
     color: #fff; }
 
 .hero {
   height: 300px;
-  background: url('/img/branding/self.jpg') no-repeat 5% bottom;
+  background: url("/img/branding/self.jpg") no-repeat 5% bottom;
   position: relative;
   z-index: 1;
   box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.25) inset; }
   @media screen and (max-width: 767px) {
     .hero {
-      background: url('/img/branding/shirt.jpg') no-repeat center bottom; }
+      background: url("/img/branding/shirt.jpg") no-repeat center bottom; }
       .hero .cell {
         text-align: center !important; } }
   @media screen and (max-width: 767px) {
@@ -101,8 +102,7 @@ header {
       right: 0;
       z-index: 1;
       background-color: rgba(255, 255, 255, 0.75);
-      content: ''; }
- }
+      content: ''; } }
   .hero * {
     position: relative;
     z-index: 2;
@@ -129,6 +129,7 @@ header {
   @media screen and (min-width: 768px) {
     .button-container .cell {
       padding: 0 20px 20px; } }
+
 .button-container .button {
   display: block;
   padding: 13px; }
@@ -153,6 +154,15 @@ footer {
   max-width: 960px;
   margin: 0 auto;
   overflow: hidden; }
+
+@media print {
+  .tagline,
+  nav,
+  h1 img,
+  footer,
+  .hero,
+  .button-container {
+    display: none; } }
 
 .page {
   margin-bottom: 30px; }
@@ -195,7 +205,8 @@ footer {
       color: #fff; }
     .example-wrapper .code .tag {
       color: #f12749; }
-    .example-wrapper .code .atv, .example-wrapper .code .str {
+    .example-wrapper .code .atv,
+    .example-wrapper .code .str {
       color: #e6db6b; }
     .example-wrapper .code .atn {
       color: #a6da2a; }

@@ -10743,19 +10743,19 @@ $(function(){
 
 	//
 	// Scroll to top of the page
-	// 
+	//
 	// $('.to-top').on('click', function(){
 	// 	$('html,body').animate({ scrollTop: $('body').offset().top }, 1000);
 	// });
 
 	// $(window).on('scroll', function(){
-		
+
 	// });
 
-	// 
+	//
 	// Get ReadMe and load it into the page
-	// 
-	// 
+	//
+	//
 
 	var $readme = $('.readme');
 
@@ -10802,6 +10802,10 @@ $(document).on('click', '.code-toggle', function(){
 		.toggleClass('active')
 		.prev()
 		.slideToggle(200);
+});
+
+$(document).on('click', '.js-print', function(){
+	window.print();
 });
 
 function b64_to_utf8( str ) {

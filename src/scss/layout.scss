@@ -209,3 +209,14 @@ footer{
 	margin: 0 auto;
 	overflow: hidden;
 }
+
+@media print{
+  .tagline,
+  nav,
+  h1 img,
+  footer,
+  .hero,
+  .button-container{
+    display: none;
+  }
+}

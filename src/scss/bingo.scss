@@ -1,0 +1,81 @@
+@import 'variables';
+
+$shirt_length: 14;
+
+.bingo-board{
+  border-left: 1px solid $gray3;
+}
+
+.bingo-board .cell{
+  width: 20%;
+  border-right: 1px solid $gray3;
+  border-bottom: 1px solid $gray3;
+  font-size: 18px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bingo-board .cell:nth-child(-n+5){
+  border-top: 1px solid $gray3;
+}
+
+.bingo-board .cell:nth-child(13){
+
+  img{
+    display: none;
+  }
+
+  &:before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: block;
+    height: 20px;
+    content: "FREE";
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &:after{
+    content: none;
+  }
+}
+
+@for $i from 0 through $shirt_length {
+  .shirt_#{$i}:before{
+    content: 'shirt_#{$i}';
+  }
+}
+
+[data-day]{
+  &:after{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    background-color: $orange;
+    color: #fff;
+    content: attr(data-day);
+    padding: 3px 5px;
+  }
+}
+
+@media print{
+  .mosaic-row[class*="stack"] > .cell{
+    width: 100% !important;
+  }
+
+  .bingo-board{
+    width: 6.5in;
+  }
+
+  .bingo-board .cell{
+    width: 1.25in !important;
+    height: 1.25in !important;
+    display: block;
+    float: left;
+  }
+}
