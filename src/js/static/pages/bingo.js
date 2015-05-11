@@ -17,15 +17,22 @@ for(var i = 0; i < shirt_length; i++){
 
 $(function(){
   for(var i = 25; i > 0; i--){
-    var random = Math.floor((Math.random() * i) + 1);
+    var random = Math.floor((Math.random() * bingo_options.length));
 
     var shirt = bingo_options[random].shirt;
     var day = bingo_options[random].day;
+
+    if(i == 13){
+      shirt = "matt";
+      day = "free";
+    }
 
     bingo_options.splice(random, 1);
 
     $('.bingo-board').append('<div class="cell" data-day="'+ day +'"><img src="/img/shirts/'+ shirt +'.jpg" /></div>');
   }
+
+
 
   $(document).trigger('board_loaded');
 });

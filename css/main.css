@@ -162,7 +162,16 @@ footer {
   footer,
   .hero,
   .button-container {
-    display: none; } }
+    display: none; }
+  html {
+    height: auto; }
+  body {
+    min-height: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
+  .wrapper {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; } }
 
 .page {
   margin-bottom: 30px; }

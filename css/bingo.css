@@ -4,78 +4,15 @@
 .bingo-board .cell {
   width: 20%;
   border-right: 1px solid #7d7d7e;
-  border-bottom: 1px solid #7d7d7e;
+  border-bottom: 1px solid #7d7d7e !important;
   font-size: 18px;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 1px;
+  overflow: hidden; }
 
 .bingo-board .cell:nth-child(-n+5) {
   border-top: 1px solid #7d7d7e; }
-
-.bingo-board .cell:nth-child(13) img {
-  display: none; }
-
-.bingo-board .cell:nth-child(13):before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  display: block;
-  height: 20px;
-  content: "FREE";
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px; }
-
-.bingo-board .cell:nth-child(13):after {
-  content: none; }
-
-.shirt_0:before {
-  content: "shirt_0"; }
-
-.shirt_1:before {
-  content: "shirt_1"; }
-
-.shirt_2:before {
-  content: "shirt_2"; }
-
-.shirt_3:before {
-  content: "shirt_3"; }
-
-.shirt_4:before {
-  content: "shirt_4"; }
-
-.shirt_5:before {
-  content: "shirt_5"; }
-
-.shirt_6:before {
-  content: "shirt_6"; }
-
-.shirt_7:before {
-  content: "shirt_7"; }
-
-.shirt_8:before {
-  content: "shirt_8"; }
-
-.shirt_9:before {
-  content: "shirt_9"; }
-
-.shirt_10:before {
-  content: "shirt_10"; }
-
-.shirt_11:before {
-  content: "shirt_11"; }
-
-.shirt_12:before {
-  content: "shirt_12"; }
-
-.shirt_13:before {
-  content: "shirt_13"; }
-
-.shirt_14:before {
-  content: "shirt_14"; }
 
 [data-day]:after {
   position: absolute;

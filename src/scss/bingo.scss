@@ -9,45 +9,16 @@ $shirt_length: 14;
 .bingo-board .cell{
   width: 20%;
   border-right: 1px solid $gray3;
-  border-bottom: 1px solid $gray3;
+  border-bottom: 1px solid $gray3 !important;
   font-size: 18px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 1px;
+  overflow: hidden;
 }
 
 .bingo-board .cell:nth-child(-n+5){
   border-top: 1px solid $gray3;
-}
-
-.bingo-board .cell:nth-child(13){
-
-  img{
-    display: none;
-  }
-
-  &:before{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    display: block;
-    height: 20px;
-    content: "FREE";
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  &:after{
-    content: none;
-  }
-}
-
-@for $i from 0 through $shirt_length {
-  .shirt_#{$i}:before{
-    content: 'shirt_#{$i}';
-  }
 }
 
 [data-day]{
