@@ -1,0 +1,38 @@
+body,
+input{
+  color: #C17430;
+  background-color: #140B03;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body{
+  padding: 10px;
+}
+
+input{
+  border: none;
+  padding: 5px 5px 5px 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input:focus{
+  outline: none;
+}
+
+.prompt{
+  position: relative;
+}
+.prompt:before{
+  position: absolute;
+  left: 0;
+  margin-top: 5px;
+  content: '>';
+  font-weight: bold;
+}
+
+td{
+  padding: 0 10px;
+}

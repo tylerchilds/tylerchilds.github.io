@@ -36,6 +36,11 @@ gulp.task('sass', function() {
         //.pipe(minify())
         .pipe(gulp.dest('./css'));
 
+    gulp.src('src/scss/console.scss')
+        .pipe(sass())
+        //.pipe(minify())
+        .pipe(gulp.dest('./css'));
+
     return gulp.src('src/scss/import.scss')
         .pipe(sass())
         .pipe(rename('main.css'))
@@ -48,7 +53,14 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     gulp.src([
-			'bower_components/jquery/dist/jquery.js',
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/underscore/underscore.js'
+        ]).pipe(concat('dependencies.js'))
+        .pipe(gulp.dest('./js'))
+        .pipe(rename('dependencies.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./js'));
+    gulp.src([
             'src/js/Markdown.Converter.js',
             'src/js/Markdown.Sanitizer.js',
             'src/js/common.js'
@@ -61,7 +73,7 @@ gulp.task('scripts', function() {
     gulp.src([
             'src/js/static/**/*.js'
         ])
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('./js'));
 });
 
@@ -95,6 +107,7 @@ gulp.task('clean', function() {
             'vanilla-html',
             'index.html',
             'bingo',
+            'console',
             'img'
         ])
         .pipe(clean({force: true}));
@@ -102,7 +115,7 @@ gulp.task('clean', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('src/js/*.js', ['lint', 'scripts']);
+    gulp.watch('src/js/**/*.js', ['lint', 'scripts']);
     gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/html/**/*.html', ['swig']);
 });

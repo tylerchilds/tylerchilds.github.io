@@ -1,1 +1,46 @@
-for(var bingo_options=[],bingo_days=["mon","wed","fri"],days_length=bingo_days.length,prefix="shirt",shirt_length=15,i=0;shirt_length>i;i++)for(var day=0;days_length>day;day++)bingo_options.push({shirt:prefix+"_"+i,day:bingo_days[day]});$(function(){for(var i=25;i>0;i--){var o=Math.floor(Math.random()*bingo_options.length),n=bingo_options[o].shirt,a=bingo_options[o].day;13==i&&(n="matt",a="free"),bingo_options.splice(o,1),$(".bingo-board").append('<div class="cell" data-day="'+a+'"><img src="/img/shirts/'+n+'.jpg" /></div>')}$(document).trigger("board_loaded")}),$(window).on("load resize board_loaded",function(){var i=$(".bingo-board .cell"),o=i.width();i.css("height",o)});
+var bingo_options = [];
+var bingo_days = ['mon', 'wed', 'fri'];
+var days_length = bingo_days.length;
+
+var prefix = "shirt";
+
+var shirt_length = 15;
+
+for(var i = 0; i < shirt_length; i++){
+  for(var day = 0; day < days_length; day++){
+    bingo_options.push({
+      shirt: prefix + "_" + i,
+      day: bingo_days[day]
+    });
+  }
+}
+
+$(function(){
+  for(var i = 25; i > 0; i--){
+    var random = Math.floor((Math.random() * bingo_options.length));
+
+    var shirt = bingo_options[random].shirt;
+    var day = bingo_options[random].day;
+
+    if(i == 13){
+      shirt = "matt";
+      day = "free";
+    }
+
+    bingo_options.splice(random, 1);
+
+    $('.bingo-board').append('<div class="cell" data-day="'+ day +'"><img src="/img/shirts/'+ shirt +'.jpg" /></div>');
+  }
+
+
+
+  $(document).trigger('board_loaded');
+});
+
+
+$(window).on('load resize board_loaded', function(){
+  var $cell = $('.bingo-board .cell');
+  var cell_width = $cell.width();
+
+  $cell.css('height', cell_width);
+});

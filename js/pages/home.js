@@ -1,1 +1,3 @@
-$(function(){$("header").fadeIn(1e3)});
+$(function(){
+	$('header').fadeIn(1000);
+});
