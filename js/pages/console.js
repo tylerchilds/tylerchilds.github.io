@@ -16,7 +16,7 @@ function initialize(){
   var $prompt = $('.js-prompt');
   var $output = $('.js-output');
 
-  player = _.isNull(current) ? new Player("Link") : new Player(current.name)
+  player = _.isNull(current) ? new Player() : new Player(current)
 
   engine = new Engine({
     prompt: $prompt, 
@@ -31,9 +31,25 @@ function initialize(){
   });
 }
 
-function Player(name){
-  this.name = name;
+function Player(options){
+  var defaults = {
+    name: "Link",
+    theme: "dark"
+  };
+
+  _.extend(defaults, options);
+  this.name = options.name;
+  this.theme = options.theme;
+  this.initialize();
 };
+
+Player.prototype.initialize = function(){
+  this.draw();
+};
+
+Player.prototype.draw = function(){
+  $('body').removeClass('theme--dark theme--light').addClass('theme--'+this.theme);
+}
 
 Player.prototype.set_name = function(name) {
   this.name = name;
@@ -45,6 +61,17 @@ Player.prototype.get_name = function() {
   engine.append("Your name is: " + this.name);
 };
 
+Player.prototype.set_theme = function(theme) {
+  if(theme == 'dark' || theme == 'light'){
+    this.theme = theme;
+    this.draw();
+    this.save();
+    return engine.append("Theme updated")
+  }
+
+  engine.append("Only themes available are `dark` or `light`.");
+};
+
 Player.prototype.save = function() {
   localStorage.setItem('player', JSON.stringify(this));
 };
@@ -53,10 +80,6 @@ function Engine (options) {
   this.prompt = options.prompt;
   this.output = options.output;
   this.player = options.player;
-};
-
-Engine.prototype.clear = function() {
-  this.output.empty();
 };
 
 Engine.prototype.submit = function(ev) {
@@ -92,6 +115,9 @@ Engine.prototype.process = function(value) {
       if(arg) this.player.set_name(arg);
       else this.player.get_name();
       break;
+    case /^theme/.test(command):
+      this.player.set_theme(arg);
+      break;
     case /^clear$/.test(command):
       this.clear();
       break;
@@ -103,9 +129,15 @@ Engine.prototype.process = function(value) {
   }
 };
 
+
+Engine.prototype.clear = function() {
+  this.output.empty();
+};
+
 Engine.prototype.help = function() {  
   var help_table = Formatter.table([
     ["name [(string)]:", "set or view your player name"],
+    ["theme [dark|light]:", "set or view your player name"],
     ["help:", "display possible commands"], 
     ["clear:", "clear the output console"]
   ]);

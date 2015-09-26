@@ -30,3 +30,8 @@ input:focus {
 
 td {
   padding: 0 10px; }
+
+.theme--light,
+.theme--light input {
+  background-color: #f7f7f7;
+  color: #140B03; }
