@@ -43,15 +43,3 @@ Nothing worthy of note. However, [this is my github](http://www.github.com/tyler
 * Writing
 * Watercolor painting
 * Home automation
-
-#### Bloopers
-
-The most powerful weapon we have is our minds.
-
-The most anyone needs to know about history is in your shower, _hopefully_. Go look at the back of your shampoo. If you're lazy, here it is:
-
-1. Lather
-2. Rinse
-3. Repeat
-
-If you want to rule the world, burn the books. If you can't burn the books, kill the language.
