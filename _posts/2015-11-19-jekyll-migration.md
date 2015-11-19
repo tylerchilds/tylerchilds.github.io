@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll Migration!"
 date:   2015-11-19 2:41:00 -0800
-categories: jekyll update
+categories: development
 ---
 
 Decided to upgrade my gulp generated static website to a jekyll generated blog-aware static website.

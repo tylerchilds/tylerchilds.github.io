@@ -3,6 +3,7 @@ layout: page
 title: Resume
 permalink: /resume/
 description: Slightly unconventional, but I never wanted to be an oven anyhow.
+weight: 20
 ---
 
 ### Objective

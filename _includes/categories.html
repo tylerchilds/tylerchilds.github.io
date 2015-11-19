@@ -1,0 +1,6 @@
+<nav class="site-sub-nav">
+  {% for category in site.categories %}
+    {% assign cat = category | first %}
+    <a href='/blog/cat/{{ cat }}'>{{ site.data.cats[cat].name }}</a>
+  {% endfor %}
+</nav>

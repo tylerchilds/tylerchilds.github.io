@@ -1,6 +1,20 @@
 ---
-layout: default
+layout: blog
 ---
+
+{% assign post = page %}
+{% if post.categories.size > 0 %}
+  {% capture cats_content %}Categories: {% endcapture %}
+  {% for post_cat in post.categories %}
+    {% assign cat = site.data.cats[post_cat] %}
+    {% if cat %}
+      {% capture cats_content_temp %}{{ cats_content }}<a href="/blog/cat/{{ post_cat }}/">{{ cat.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+      {% assign cats_content = cats_content_temp %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+    {% assign cats_content = '' %}
+{% endif %}
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="wrapper">
@@ -12,5 +26,7 @@ layout: default
     <div class="post-content" itemprop="articleBody">
       {{ content }}
     </div>
+
+    {{ cats_content }}
   </div>
 </article>
