@@ -26,18 +26,24 @@ In a digital age, it's no longer dress for the job you want, not the one you hav
 
 Some people get dealt a better hand, while others play a terrible hand really well. Nobody else actually wanted to play.
 
-It's almost overwhelming that our life is compared to a game. In games, not everyone wins, there has to be more to life, such that, the people on top don't need to enslave the people on the bottom.
+People in power want to stay in power. People on the bottom just want a life, liberty and the pursuit of happiness. However, the cost of life is so high that most people are in debt, living paycheck to paycheck, and have no free time to improve their quality of life. The world is exhausted.
 
-I want to live in a world where we work together. A world where we bind ourselves together on our similarities, rather than divide ourselves on our differences.
+I want to live in a world where we work together. A world that doesn't leave anyone behind, by empowering them to help themselves and equipping them with the tools to do so.
 
 ### Achievements
 
 Nothing worthy of note. However, [this is my github](http://www.github.com/tylerchilds).
 
+### Pet Peeves
+
+* Stalker marketing tactics
+* The gas industry, in all facets
+* The unwarranted hate that Zune got
+
 #### Skills
 
 * Web Development: _Full-stack: Ruby on Rails, CSS specialization_
-* Ranting and conspiracy: _Maybe the worlds not as bad as I think and there are just *a lot* of incompetent people in power._
+* Ranting and conspiracy: _Maybe the world is not as bad as I think and there are just *a lot* of incompetent people in power._
 
 #### Aspirations
 
