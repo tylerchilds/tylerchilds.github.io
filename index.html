@@ -4,13 +4,17 @@ layout: default
 <section class="wrapper">
   <div class="home">
 
-    <h1 class="page-heading">Blog</h1>
-
     <ul class="post-list">
       {% for post in site.posts %}
         <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
+          <div class="post-meta">
+            <div class="post-date">
+              <span class="post-month">{{ post.date | date: "%b" }}</span>
+              <span class="post-day">{{ post.date | date: "%-d" }}</span>
+              <span class="post-year">{{ post.date | date: "%Y" }}</span>
+            </div>
+          </div>
+          
           <h2>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>

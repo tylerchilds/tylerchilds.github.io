@@ -1,0 +1,57 @@
+.post-list{
+	list-style-type: none;
+	margin-left: 0;
+
+	@media (min-width: 768px){
+		padding-left: 65px;
+	}
+
+	li{
+		position: relative;
+	}
+}
+
+.post-date{
+	color: $gray3;
+	font-weight: bold;
+
+	@media (min-width: 768px){
+		background-color: $gray6;
+		position: absolute;
+		left: -65px;
+		top: 13px;
+		text-align: center;
+		width: 40px;
+		border: 1px solid $gray5;
+	}
+}
+
+.post-year{
+	@media (min-width: 768px){
+		display: block;
+		font-size: 1rem;
+		position: relative;
+		margin-top: -10px;
+	}
+}
+
+.post-month{
+	@media (min-width: 768px){
+		font-size: 1rem;
+		text-transform: uppercase;
+
+		&:after{
+			content: "\A";
+			white-space: pre;
+		}
+	}
+}
+
+.post-day{
+	@media (min-width: 768px){
+		position: relative;
+		top: -5px;
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+}
