@@ -2,7 +2,7 @@
 	list-style-type: none;
 	margin-left: 0;
 
-	@media (min-width: 768px){
+	@media  screen and (min-width: 768px){
 		padding-left: 65px;
 	}
 
@@ -15,7 +15,7 @@
 	color: $gray3;
 	font-weight: bold;
 
-	@media (min-width: 768px){
+	@media screen and (min-width: 768px){
 		background-color: $gray6;
 		position: absolute;
 		left: -65px;
@@ -27,7 +27,7 @@
 }
 
 .post-year{
-	@media (min-width: 768px){
+	@media  screen and (min-width: 768px){
 		display: block;
 		font-size: 1rem;
 		position: relative;
@@ -36,7 +36,7 @@
 }
 
 .post-month{
-	@media (min-width: 768px){
+	@media  screen and (min-width: 768px){
 		font-size: 1rem;
 		text-transform: uppercase;
 
@@ -48,7 +48,7 @@
 }
 
 .post-day{
-	@media (min-width: 768px){
+	@media  screen and (min-width: 768px){
 		position: relative;
 		top: -5px;
 		font-size: 1.8rem;
