@@ -1,108 +1,28 @@
-<!doctype html>
+---
+layout: default
+---
+<section class="wrapper">
+  <div class="home">
 
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <h1 class="page-heading">Blog</h1>
 
-	<title>Tyler Childs | A Web Developer &amp; Designer</title>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-	
-	<link rel="stylesheet" href="/css/base.min.css">
-	<link rel="stylesheet" href="/css/mosaic.min.css">
-	<link rel="stylesheet" href="/css/main.min.css">
-	<link rel="stylesheet" media="print" href="/css/print.css">
-	
-</head>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
 
-<body>
-	
-		<header>
-			<h1><a href="/"><img src="/img/branding/logo.png" />Tyler Childs</a></h1>
-			<h2 class="tagline">A Web Developer &amp; Designer</h2>
-			<nav>
-				<!-- <a href="/personal" >Personal</a> -->
-				<a href="/" >Projects</a>
-			</nav>
-		</header>
+          {{ post.content | newline_to_br | split: '<br />' | first }}
 
-		<div class="mosaic-row right hero stack-767" >
-			<div class="cell cell-8 pull-1 center middle">
-				
-					<h2>Tyler Childs prefers pepper jack for his cheeseburgers.</h2>
-				
-			</div>
-		</div>
-		<div class="wrapper">
+          <a href="{{ post.url }}">Read more</a>
+        </li>
+      {% endfor %}
+    </ul>
 
-			
-	<div class="page" id="home">
-		<h2>GitHub projects</h2>
-		<div class="mosaic-row center stack-767 projects">
-			<div class="cell cell-4">
-				<h3>Base Stylesheet</h3>
-				<p>A fairly standard base stylesheet with Meyer's Reset included.</p>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-				<a href="/base-stylesheet/demo.html" class="button">View Demo</a>
-
-				<div class="project-links">
-					<a href="/base-stylesheet">View Project</a> |
-					<a href="https://github.com/tylerchilds/base-stylesheet">View Source</a>
-				</div>
-			</div>
-			<div class="cell cell-4">
-				<h3>Mosaic CSS</h3>
-				<p>Pure CSS grid system for vertical alignment and mixed fixed/fluid columns</p>
-
-				<a href="/mosaic/demo.html" class="button">View Demo</a>
-
-				<div class="project-links">
-					<a href="/mosaic">View Project</a> |
-					<a href="https://github.com/tylerchilds/mosaic">View Source</a>
-				</div>
-			</div>
-			<div class="cell cell-4">
-				<h3>Vanilla HTML</h3>
-				<p>A proof of concept, minimal mark-up flexbox grid framework/system</p>
-
-				<a href="/vanilla-html/demo.html" class="button">View Demo</a>
-
-				<div class="project-links">
-					<a href="/vanilla-html">View Project</a> |
-					<a href="https://github.com/tylerchilds/vanilla-html">View Source</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-		</div>
-		<footer class="wrapper">
-			<div class="mosaic-row stack-767">
-				<div class="cell cell-12 contain-225-right">
-					<a href="http://www.linkedin.com/tylerchilds" target="_blank">LinkedIn</a> .
-					<a href="http://www.twitter.com/tylerchilds" target="_blank">Twitter</a> .
-					<a href="http://www.instagram.com/tylerchilds" target="_blank">Instagram</a> .
-					<a href="http://www.github.com/tylerchilds" target="_blank">Github</a> .
-					<a href="http://www.codeeval.com/profile/tylerchilds/" target="_blank">Codeeval</a>
-				</div>
-				<div class="copyright cell fixed-225 right">&copy; Tyler Childs 2009-2014</div>
-			</div>
-		</footer>
-	
-	
-		<script src="/js/dependencies.js"></script>
-		<script src="/js/main.js"></script>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-8248761-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=html"></script>
-	
-</body>
-</html>
+  </div>
+</section>

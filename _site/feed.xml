@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tyler Childs</title>
+    <description>This is the final destination for my personal website. It&#39;s as complex as it will ever need to be and there are better things for me to do, to learn and explore. There&#39;s an entire world out there beyond the boxes we tend to put everything into
+</description>
+    <link>http://tylerchilds.com/</link>
+    <atom:link href="http://tylerchilds.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 19 Nov 2015 02:50:43 -0800</pubDate>
+    <lastBuildDate>Thu, 19 Nov 2015 02:50:43 -0800</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Jekyll Migration!</title>
+        <description>&lt;p&gt;Decided to upgrade my gulp generated static website to a jekyll generated blog-aware static website.&lt;/p&gt;
+
+&lt;p&gt;I’m really not sure if I’ll utilize the blog, since I’ve done so well with keeping up with blogs in the past. Mostly I’ve been itching to play with jekyll for a while and my existing site seemed like a pretty straight-forward port.&lt;/p&gt;
+
+&lt;p&gt;I’ve been hosting my site on github pages for well over a year and while it’s nothing elaborate, I realized I don’t like sinking a lot of time into my website anyhow… Well, apart from this being the ninth iteration of my site since I started it back in 2008.&lt;/p&gt;
+
+&lt;p&gt;Here’s to the future.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Nov 2015 02:41:00 -0800</pubDate>
+        <link>http://tylerchilds.com/jekyll/update/2015/11/19/jekyll-migration.html</link>
+        <guid isPermaLink="true">http://tylerchilds.com/jekyll/update/2015/11/19/jekyll-migration.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

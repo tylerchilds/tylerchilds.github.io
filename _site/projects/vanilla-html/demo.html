@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Vanilla HTML Demo</title>
+  <meta name="description" content="This is the final destination for my personal website. It's as complex as it will ever need to be and there are better things for me to do, to learn and explore. There's an entire world out there beyond the boxes we tend to put everything into
+">
+
+  <link rel="stylesheet" href="/css/main.css">
+	
+		<link rel="stylesheet" href="/css/pages/vanilla.css">
+	
+  <link rel="canonical" href="http://tylerchilds.com/projects/vanilla-html/demo.html">
+  <link rel="alternate" type="application/rss+xml" title="Tyler Childs" href="http://tylerchilds.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <h1>
+    <a class="site-title" href="/">
+      <img src="/img/branding/logo.png" />
+      Tyler Childs
+    </a>
+  </h1>
+  <h2 class="tagline">A Web Developer &amp; Designer</h2>
+  <nav class="site-nav">
+    
+      
+        
+        
+        
+      
+    
+      
+        
+        
+        
+      
+    
+      
+        
+        
+        
+      
+    
+      
+    
+      
+        
+        
+        
+          <a href='/projects/'>Projects</a>
+        
+      
+    
+      
+        
+        
+        
+      
+    
+      
+        
+        
+        
+      
+    
+      
+        
+        
+        
+      
+    
+      
+    
+      
+        
+        
+        
+          <a href='/resume/'>Resume</a>
+        
+      
+    
+      
+    
+  </nav>
+</header>
+
+  
+  
+  
+
+  
+    
+    
+
+
+  <nav class="site-sub-nav">
+    
+      
+        
+        
+        
+
+        
+      
+    
+      
+        
+        
+        
+
+        
+      
+    
+      
+        
+        
+        
+
+        
+      
+    
+      
+    
+      
+        
+        
+        
+
+        
+      
+    
+      
+        
+        
+        
+
+        
+          <a href='/projects/vanilla-html/'>Vanilla HTML</a>
+        
+      
+    
+      
+        
+        
+        
+
+        
+          <a href='/projects/mosaic/'>Mosaic</a>
+        
+      
+    
+      
+        
+        
+        
+
+        
+          <a href='/projects/base-stylesheet/'>Base Stylesheet</a>
+        
+      
+    
+      
+    
+      
+        
+        
+        
+
+        
+      
+    
+      
+    
+  </nav>
+
+
+
+    <div class="page-content">
+      <article class="static">
+  <div class="page-content">
+    <div class="mosaic-row right hero stack-767" >
+    	<div class="cell cell-8 pull-1 center middle">
+    		<h2>Vanilla HTML Demo</h2>
+    		<p>A proof of concept, minimal mark-up flexbox grid framework/system</p>
+
+    	</div>
+    </div>
+    <div class="wrapper">
+	<div class="page" id="vanilla">
+    <div class="mosaic-row center collapse-767 button-container">
+      <div class="cell cell-4 middle">
+        <a href="./" class="button">View Project</a>
+      </div>
+      <div class="cell cell-4 middle">
+        <a href="https://raw.githubusercontent.com/tylerchilds/Vanilla-HTML/master/css/vanilla.css" class="button">Download</a>
+      </div>
+      <div class="cell cell-4 middle">
+        <a href="https://github.com/tylerchilds/vanilla-html" class="button" target="_blank">Fork on Github</a>
+      </div>
+    </div>
+
+
+    <div class="vanilla">
+      <h1>Vanilla HTML</h1>
+      <hr />
+      <section>
+          <h3>Pure Markup</h3>
+          <section>
+              <p>Vanilla HTML is a framework built on the concept of not requiring extra markup or class attributes to attain a layout. Just write semantic HTML with some basic knowledge of Vanilla HTML and your layout is done. Seriously, now focus on the things that are actually important, like your design. Oh yeah and Vanilla HTML is 100% responsive.</p>
+          </section>
+      </section>
+
+      <hr />
+
+      <img src="/img/demos/abstract.jpg" />
+
+      <article>
+          <section>
+              <h4>Almost Magic</h4>
+              <div>
+                  <p>
+                      <strong>GRID:</strong> Start a grid by adding class="vanilla" to an element. This is the only CSS class in the API. For a simple layout all you need is &lt;body class="vanilla"&gt;
+                  </p>
+                  <p><strong>ROWS:</strong> Elements that are direct children of class="vanilla" will become ROWS.</p>
+                  <p>
+                      <strong>COLUMNS:</strong> Direct children of ROWS will be COLUMNS. Columns are weighted depending on the tag. header, section, nav, article, main, address, and footer tags produce a larger column when placed next to any other tag. Using this technique you can create an assortment of different column layouts.
+                  </p>
+              </div>
+          </section>
+          <aside>
+              <h4>Notes</h4>
+              <p>
+                  <strong>Note:</strong> To achieve optimal responsive media, do not place media elements (img, video, iframe, etc.) as direct children of rows.
+              </p>
+              <p>
+                  <strong>Tables:</strong> It's a great idea to not use tables for grids, rows or columns, so great, in fact, NEVER do it. Just nest your tables inside a column and they'll play nice.
+              </p>
+          </aside>
+      </article>
+
+      <section>
+          <h3 class="github"><a href="https://github.com/tylerchilds/Vanilla-HTML" target="_blank">View on GitHub</a></h3>
+      </section>
+
+      <hr />
+
+      <h2>Three Equal Columns</h2>
+      <section>
+          <aside>
+              <h4>Who?</h4>
+              <p>Tyler Childs developed Vanilla HTML. He's a web designer and developer.</p>
+          </aside>
+          <aside>
+              <h4>What?</h4>
+              <p>Vanilla HTML. It's a framework with pure HTML markup, are you even listening?</p>
+          </aside>
+          <aside>
+              <h4>Why?</h4>
+              <p>Because he was tired of class attributes to determine page layouts.</p>
+          </aside>
+      </section>
+
+      <hr />
+
+      <h3>Code Examples</h3>
+      <section>
+          <h4>Layout Syntax</h4>
+          <section>
+              <pre>
+&lt;body class="vanilla"&gt;
+  &lt;h2>Two Column Layout&lt;/h2&gt;
+  &lt;section&gt;
+    &lt;h3&gt;This is column One&lt;/h3&gt;
+    &lt;aside&gt;
+        This is Column Two
+    &lt;/aside&gt;
+  &lt;/section&gt;
+&lt;/body&gt;
+              </pre>
+          </section>
+      </section>
+      <section>
+          <h4>Output</h4>
+          <section class="vanilla example">
+              <h2>Two Column Layout</h2>
+              <section>
+                  <h3>This is Column One</h3>
+                  <aside>
+                      This is Column Two
+                  </aside>
+              </section>
+          </section>
+      </section>
+
+
+      <hr />
+
+      <!--<h4>Nicholas Cage!</h4>
+      <article>
+          <div>
+              <img src="http://placecage.com/300/300" />
+          </div>
+
+          <div>
+              <img src="http://placecage.com/g/300/300" />
+          </div>
+
+          <div>
+              <img src="http://placecage.com/c/340/340" />
+          </div>
+
+          <div>
+              <img src="http://placecage.com/c/300/300" />
+          </div>
+
+      </article> -->
+
+      <h4>Forms</h4>
+      <section>
+          <form class="vanilla" action="javascript:donut(); return false;">
+              <h5>Horizontal</h5>
+              <div>
+                  <label>First Name</label>
+                  <input type="text" />
+              </div>
+              <div>
+                  <label>Email</label>
+                  <input type="text" />
+              </div>
+              <div>
+                  <input type="submit" />
+              </div>
+          </form>
+          <pre>
+&lt;form class="vanilla"&gt;
+  &lt;h5&gt;Horizontal&lt;/h5&gt;
+  &lt;div&gt;
+    &lt;label&gt;First Name&lt;/label&gt;
+    &lt;input type="text" /&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Email&lt;/label&gt;
+    &lt;input type="text" /&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit" /&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+          </pre>
+      </section>
+      <section>
+         <form class="vanilla" action="javascript:donut(); return false;">
+              <h5>Vertical</h5>
+              <label>First Name</label>
+              <input type="text" />
+              <label>Email</label>
+              <input type="text" />
+              <input type="submit" />
+          </form>
+          <pre>
+&lt;form class="vanilla"&gt;
+  &lt;h5&gt;Vertical&lt;/h5&gt;
+  &lt;label&gt;First Name&lt;/label&gt;
+  &lt;input type="text" /&gt;
+  &lt;label&gt;Email&lt;/label&gt;
+  &lt;input type="text" /&gt;
+  &lt;input type="submit" /&gt;
+&lt;/form&gt;
+          </pre>
+      </section>
+      <hr />
+
+      <h3>Column Variations</h3>
+      <div class="vanilla highlight">
+          <section>
+              <article>
+                  <p>1</p>
+              </article>
+          </section>
+          <section>
+              <article>
+                  <p>1</p>
+              </article>
+              <aside>
+                  <p>2</p>
+              </aside>
+          </section>
+          <section>
+              <aside>
+                  <p>1</p>
+              </aside>
+              <article>
+                  <p>2</p>
+              </article>
+          </section>
+          <section>
+              <aside>
+                  <p>1</p>
+              </aside>
+              <article>
+                  <p>2</p>
+              </article>
+              <aside>
+                  <p>3</p>
+              </aside>
+          </section>
+          <section>
+              <article>
+                  <p>1</p>
+              </article>
+              <aside>
+                  <p>2</p>
+              </aside>
+              <aside>
+                  <p>3</p>
+              </aside>
+          </section>
+          <section>
+              <aside>
+                  <p>1</p>
+              </aside>
+              <aside>
+                  <p>2</p>
+              </aside>
+              <article>
+                  <p>3</p>
+              </article>
+          </section>
+          <section>
+              <aside>
+                  <p>1</p>
+              </aside>
+              <aside>
+                  <p>2</p>
+              </aside>
+              <aside>
+                  <p>3</p>
+              </aside>
+          </section>
+          <section>
+              <aside>
+                  <p>1</p>
+              </aside>
+              <aside>
+                  <p>2</p>
+              </aside>
+              <aside>
+                  <p>3</p>
+              </aside>
+              <aside>
+                  <p>4</p>
+              </aside>
+          </section>
+      </div>
+
+      <hr />
+
+      <h3>Browser Support</h3>
+      <article>
+          <aside>
+              IE 10+
+          </aside>
+          <aside>
+              Firefox 2+
+          </aside>
+          <aside>
+              Chrome 4+
+          </aside>
+          <aside>
+              Safari 3.1+
+          </aside>
+          <aside>
+              Opera 12.1+
+          </aside>
+          <aside>
+              iOS 3.2+
+          </aside>
+      </article>
+
+      <hr />
+      <section class="vanilla">
+          <section>
+              <div>
+                  <h5>Brought to you in part by the National Science Foundation and Viewers like you!</h5>
+                  <p> Not really. It was built by <a href="http://www.tylerchilds.com" target="_blank">Tyler Childs</a> with the help of <a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a>, <a href="http://incident57.com/codekit/" target="_blank">CodeKit</a>, <a href="http://lesscss.org/" target="_blank">Less</a>, <a href="http://lesselements.com/" target="_blank">Less Elements</a>, and <a href="http://git.io/normalize" target="_blank">Normalize</a>.
+              </div>
+          </section>
+      </section>
+      <script>
+          // this should not display
+      </script>
+    </div>
+
+    <div class="mosaic-row center collapse-767 button-container">
+      <div class="cell cell-4 middle">
+        <a href="./" class="button">View Project</a>
+      </div>
+      <div class="cell cell-4 middle">
+        <a href="https://raw.githubusercontent.com/tylerchilds/Vanilla-HTML/master/css/vanilla.css" class="button">Download</a>
+      </div>
+      <div class="cell cell-4 middle">
+        <a href="https://github.com/tylerchilds/vanilla-html" class="button" target="_blank">Fork on Github</a>
+      </div>
+    </div>
+	</div>
+</div>
+
+  </div>
+</article>
+
+    </div>
+
+    <footer class="wrapper">
+  <div class="mosaic-row stack-767">
+    <div class="cell cell-12 contain-225-right">
+      <a href="http://www.linkedin.com/tylerchilds" target="_blank">LinkedIn</a> .
+      <a href="http://www.twitter.com/tylerchilds" target="_blank">Twitter</a> .
+      <a href="http://www.instagram.com/tylerchilds" target="_blank">Instagram</a> .
+      <a href="http://www.github.com/tylerchilds" target="_blank">Github</a> .
+      <a href="http://www.codeeval.com/profile/tylerchilds/" target="_blank">Codeeval</a>
+    </div>
+    <div class="copyright cell fixed-225 right">&copy; Tyler Childs 2009-2014</div>
+  </div>
+</footer>
+
+
+    <script src="/js/dependencies.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-8248761-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+  </body>
+
+</html>
