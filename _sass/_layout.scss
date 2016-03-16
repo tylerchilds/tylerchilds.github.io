@@ -59,7 +59,7 @@ header{
 		padding-bottom: 0;
 		font-family: $body;
 		font-weight: normal;
-		font-size: $font-size +3;
+		font-size: $font-size +.3;
 		line-height: 40px;
 		margin-right: 21px;
 
@@ -194,12 +194,17 @@ header{
 	}
 }
 
-.button{
+
+.button,
+[type="submit"]{
+  border: none;
   display: inline-block;
   padding: 13px 34px;
   background-color: $orange;
   font-size: 1.4rem;
 	margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
 
   &:link, &:visited, &:hover, &:focus{
   	text-decoration: none;
@@ -209,6 +214,11 @@ header{
   &:hover{
     background-color: darken($orange, 2%);
   }
+}
+
+.button--small{
+  padding: 8px 13px;
+  font-size: $font-size--small;
 }
 
 footer{

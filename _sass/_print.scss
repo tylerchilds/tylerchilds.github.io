@@ -1,0 +1,9 @@
+@media print{
+	header,
+	nav,
+	form,
+	.hero,
+	.no-print{
+		display: none !important;
+	}
+}

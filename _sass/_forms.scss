@@ -1,0 +1,27 @@
+label{
+  display: inline-block;
+  padding: 3px 8px 0;
+  position: relative;
+  top: 13px;
+  left: 8px;
+  font-size: $font-size--small;
+  background-color: $white;
+  color: $gray3;
+}
+
+input[type="text"],
+textarea{
+  display: block;
+  width: 100%;
+  resize: none;
+  padding: 8px 13px 5px;
+  box-sizing: border-box;
+  border: 1px solid $gray5;
+  font-size: $font-size;
+  margin-bottom: 13px;
+
+  &:focus{
+    outline: none;
+    border: 1px solid $orange;
+  }
+}
