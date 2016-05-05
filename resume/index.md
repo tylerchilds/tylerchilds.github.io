@@ -32,7 +32,7 @@ I want to live in a world where we work together. A world that doesn't leave any
 
 ### Achievements
 
-Nothing worthy of note. However, [this is my github](http://www.github.com/tylerchilds).
+Nothing worthy of note. However, [this is my github](https://www.github.com/tylerchilds).
 
 ### Pet Peeves
 

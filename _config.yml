@@ -15,7 +15,7 @@ description: >
   There's an entire world out there beyond the boxes
   we tend to put everything into
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://tylerchilds.com" # the base hostname & protocol for your site
+url: "https://tylerchilds.com" # the base hostname & protocol for your site
 tagline: A Web Developer &amp; Designer
 
 # Build settings
