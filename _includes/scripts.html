@@ -10,6 +10,6 @@
   ga('send', 'pageview');
 </script>
 
-{% if page.css %}
-    <script src="{{ "/js/pages/" | prepend: site.baseurl }}{{ page.js }}"></script>
-  {% endif %}
+{% if page.js %}
+  <script src="{{ "/js/pages/" | prepend: site.baseurl }}{{ page.js }}"></script>
+{% endif %}
