@@ -1,28 +1,18 @@
-html{
-	height: 100%;
-}
-
 body{
-	position: relative;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	min-height: 100%;
-
 	@media screen and (min-width: 960px){
-		padding-top: 66px;
+		padding-top: 2rem;
 	}
 }
 
 header{
-	background-color: $blue;
+	background-color: $primary;
 	color: #fff;
-	padding: 13px;
-	line-height: 40px;
+	padding: 1.2rem;
 	overflow: hidden;
 	text-align: right;
 
 	@media screen and (min-width: 768px){
-		padding: 13px 21px;
+		padding: 1.2rem 2.4rem;
 	}
 
 	@media screen and (min-width: 960px){
@@ -30,25 +20,26 @@ header{
 		top: 0;
 		right: 0;
 		left: 0;
-		z-index: 2;
+		z-index: $z_index-2;
 	}
 
 	h1{
 		float: left;
-		font-size: 24px;
-		padding-right: 13px;
+		font-size: 1.8rem;
 		padding-bottom: 0;
-		line-height: 40px;
-
-		@media screen and (min-width: 768px){
-			padding-right: 21px;
-		}
+		padding: 0 1.2rem 0 50px;
+		position: relative;
+		line-height: 2.4rem;
 
 		img{
-			float: left;
-			padding-right: 13px;
+
+			padding-right: 1.2rem;
 			padding-bottom: 0;
-			height: 40px;
+			height: 34px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -17px;;
 		}
 	}
 
@@ -57,11 +48,11 @@ header{
 		float: left;
 		padding-top: 0;
 		padding-bottom: 0;
+		line-height: 2.4rem;
 		font-family: $body;
 		font-weight: normal;
-		font-size: $font-size +.3;
-		line-height: 40px;
-		margin-right: 21px;
+		font-size: $font-size--small;
+		margin-right: 2.4rem;
 
 		@media screen and (min-width: 960px){
 			display: inline-block;
@@ -74,6 +65,7 @@ header{
 		display: inline-block;
 		margin: 0 auto;
 		clear: both;
+		font-size: $font-size--small;
 
 		@media screen and (min-width: 768px){
 			float: right;
@@ -82,11 +74,8 @@ header{
 		}
 
 		a{
-			padding: 5px 8px;
-			border-radius: 2px;
-
 			@media screen and (min-width: 768px){
-				padding: 34px 13px;
+				padding: 1.2rem;
 			}
 		}
 
@@ -116,6 +105,7 @@ header{
 	background-color: $gray6;
 	border-bottom: 1px solid $gray5;
 	padding: 8px 13px;
+	font-size: $font-size--small;
 
 	a{
 		display: inline-block;

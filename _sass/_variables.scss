@@ -1,6 +1,6 @@
-$blue: #216a9e;
-$blue-dark: darken($blue, 10%);
-$blue-light: lighten($blue, 10%);
+$primary: #216a9e;
+$primary-dark: darken($primary, 10%);
+$primary-light: lighten($primary, 10%);
 
 $orange: #D15017;
 
@@ -10,23 +10,7 @@ $yellow: yellow;
 
 $purple: purple;
 
-$white: #fff;
-
-// dark shades
-$gray1: #3c3c3d;
-$gray2: #5a5a5b;
-$gray3: #7d7d7e;
-
-
-// light shades
-$gray4: #cdcdce;
-$gray5: #dededf;
-$gray6: #efeff0;
-
-$font-size--small: 1.1rem;
-$font-size: 1.5rem;
-$line-height: 2.1rem;
+$base-font: "Source Sans Pro", Verdana, Geneva, sans-serif;
+$monospace-font: "PT Mono", monospace;
 
 $heading: "PT Sans", Futura, "Trebuchet MS", Arial, sans-serif;
-$body: "Source Sans Pro", Verdana, Geneva, sans-serif;
-$monospace: "PT Mono", monospace;
