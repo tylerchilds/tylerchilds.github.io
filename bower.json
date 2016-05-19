@@ -13,7 +13,12 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "cutestrap": "~1.2.0"
+  "devDependencies": {
+    "cutestrap": "~1.2.0",
+    "backbone.marionette": "~2.4.5",
+    "jquery": "~2.2.3"
+  },
+  "resolutions": {
+    "backbone": ">=0.9.9 <=1.2.3"
   }
 }
