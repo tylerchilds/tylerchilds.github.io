@@ -51,8 +51,6 @@ _Law of the instrument_
 
 "I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail." - Abraham Maslow
 
-### Front end as a nail
-
 Basic actions involving certain click, hover, and focus can all be handled by CSS, Javascript or both together.
 
 So how do you know which one to use?
@@ -65,7 +63,7 @@ jQuery is the perfect example of blending CSS and javascript, since you use CSS 
 
 #### With/without jQuery
 
-Hiding
+Expanding/Collapsing a content section: Event listeners and selectors.
 
 ## Side by Side CSS vs Javascript
 

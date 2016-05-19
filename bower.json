@@ -1,0 +1,19 @@
+{
+  "name": "tylerchilds.github.io",
+  "version": "2.0.0",
+  "homepage": "https://github.com/tylerchilds/tylerchilds.github.io",
+  "authors": [
+    "Tyler Childs <tylerwchilds@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "cutestrap": "~1.2.0"
+  }
+}

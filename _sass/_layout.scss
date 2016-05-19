@@ -7,6 +7,7 @@ body{
 header{
 	background-color: $primary;
 	color: #fff;
+	font-size: $font-size--small;
 	padding: 1.2rem;
 	overflow: hidden;
 	text-align: right;
@@ -25,11 +26,12 @@ header{
 
 	h1{
 		float: left;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		padding-bottom: 0;
-		padding: 0 1.2rem 0 50px;
+		padding: 0 1.2rem 0 40px;
 		position: relative;
 		line-height: 2.4rem;
+		font-weight: 600;
 
 		img{
 
@@ -63,20 +65,10 @@ header{
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		display: inline-block;
-		margin: 0 auto;
-		clear: both;
-		font-size: $font-size--small;
-
-		@media screen and (min-width: 768px){
-			float: right;
-			display: block;
-			clear: none;
-		}
 
 		a{
-			@media screen and (min-width: 768px){
-				padding: 1.2rem;
-			}
+			padding: 0 1.2rem;
+			display: inline-block;
 		}
 
 
@@ -104,8 +96,9 @@ header{
 .site-sub-nav{
 	background-color: $gray6;
 	border-bottom: 1px solid $gray5;
-	padding: 8px 13px;
+	padding: 1.2rem;
 	font-size: $font-size--small;
+	margin-bottom: -1px;
 
 	a{
 		display: inline-block;
@@ -114,101 +107,34 @@ header{
 }
 
 .hero{
-  height: 300px;
-  background: url('/img/branding/self.jpg') no-repeat 5% bottom;
+  height: 24rem;
+  background: url('/img/branding/shirt.jpg') no-repeat center bottom;
   position: relative;
   z-index: 1;
   box-shadow: 0 -1px 1px 0 rgba(0,0,0,.25) inset;
+	align-items: center;
+	text-align: center;
 
-  @media screen and (max-width: 767px){
-  	background: url('/img/branding/shirt.jpg') no-repeat center bottom;
-
-  	.cell{
-  		text-align: center !important;
-  	}
+  &:after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(255,255,255,.75);
+    content: '';
   }
-
-	@media screen and (max-width: 767px){
-	  &:after{
-	    position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-	    z-index: 1;
-	    background-color: rgba(255,255,255,.75);
-	    content: '';
-	  }
-	}
 
   *{
     position: relative;
     z-index: 2;
     color: $gray1;
   }
-
-  p{
-    font-size: 1.8rem;
-  }
-}
-
-.wrapper{
-	padding: 34px 21px;
-
-	@media screen and (min-width: 768px){
-		padding: 55px 34px;
-	}
-}
-
-.page{
-	max-width: 960px;
-	margin: 0 auto;
 }
 
 .readme{
-	margin-bottom: 30px;
-}
-
-.button-container{
-	.cell{
-    padding: 0 10px;
-    margin-bottom: 20px;
-
-    @media screen and (min-width: 768px){
-      padding: 0 20px 20px;
-    }
-  }
-  .button{
-	  display: block;
-	  padding: 13px;
-	}
-}
-
-
-.button,
-[type="submit"]{
-  border: none;
-  display: inline-block;
-  padding: 13px 34px;
-  background-color: $orange;
-  font-size: 1.4rem;
-	margin-bottom: 10px;
-  color: #fff;
-  cursor: pointer;
-
-  &:link, &:visited, &:hover, &:focus{
-  	text-decoration: none;
-    color: #fff;
-  }
-
-  &:hover{
-    background-color: darken($orange, 2%);
-  }
-}
-
-.button--small{
-  padding: 8px 13px;
-  font-size: $font-size--small;
+	margin-bottom: 2.4rem;
 }
 
 footer{

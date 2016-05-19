@@ -8,21 +8,27 @@ js: group-generator.js
 ---
 
 <div class="page" id="group-generator">
-  <div class="mosaic-row">
-    <aside class="cell cell-4 no-print">
+  <div class="grid-large">
+    <aside class="column--light no-print">
       <form id="form-names">
-        <label for="add-names">Add People</label>
-        <textarea class="form-control" rows="3" id="add-names" placeholder="Comma separated list of users"></textarea>
-        <button type="submit" class="button button--small">Add People</button>
+        <label class="textfield">
+          <textarea rows="3" id="add-names" placeholder="Comma separated list of users"></textarea>
+          <span class="textfield__label">Add People</span>
+        </label>
+
+        <button type="submit" class="button button">Add People</button>
       </form>
       <h3>People</h3>
       <div id="region-names" class="people-list"></div>
     </aside>
-    <section class="cell cell-8 groups">
+    <section>
       <form id="form-groups">
-        <label for="group-size">Number of Groups</label>
-        <input type="text" class="form-control" id="group-size" value="10">
-        <button type="submit" class="button button--small">Create Groups</button>
+        <label class="textfield">
+          <input type="text" id="group-size" value="10">
+          <span class="textfield__label">Number of Groups</span>
+        </label>
+
+        <button type="submit" class="button button">Create Groups</button>
       </form>
 
       <div id="region-groups" class="mosaic-row">
@@ -34,7 +40,7 @@ js: group-generator.js
 
 <script type="text/template" id="view-single-list-edit">
   <p class="person">
-    <%= name %> 
+    <%= name %>
     <span class="remove-name" data-name="<%= name %>">X</span>
   </p>
 </script>
