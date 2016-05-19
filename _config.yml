@@ -16,7 +16,7 @@ description: >
   we tend to put everything into
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tylerchilds.com" # the base hostname & protocol for your site
-tagline: A Web Developer &amp; Designer
+tagline: Design Technologist & Engineer
 
 # Build settings
 markdown: kramdown

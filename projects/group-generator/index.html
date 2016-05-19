@@ -7,35 +7,33 @@ css: group-generator.css
 js: group-generator.js
 ---
 
-<div class="page" id="group-generator">
-  <div class="grid-large">
-    <aside class="column--light no-print">
-      <form id="form-names">
-        <label class="textfield">
-          <textarea rows="3" id="add-names" placeholder="Comma separated list of users"></textarea>
-          <span class="textfield__label">Add People</span>
-        </label>
+<div class="grid-large">
+  <aside class="column--light no-print">
+    <form id="form-names">
+      <label class="textfield">
+        <textarea rows="3" id="add-names" placeholder="Comma separated list of users"></textarea>
+        <span class="textfield__label">Add People</span>
+      </label>
 
-        <button type="submit" class="button button">Add People</button>
-      </form>
-      <h3>People</h3>
-      <div id="region-names" class="people-list"></div>
-    </aside>
-    <section>
-      <form id="form-groups">
-        <label class="textfield">
-          <input type="text" id="group-size" value="10">
-          <span class="textfield__label">Number of Groups</span>
-        </label>
+      <button type="submit" class="button button">Add People</button>
+    </form>
+    <h3>People</h3>
+    <div id="region-names" class="people-list"></div>
+  </aside>
+  <section>
+    <form id="form-groups">
+      <label class="textfield">
+        <input type="text" id="group-size" value="10">
+        <span class="textfield__label">Number of Groups</span>
+      </label>
 
-        <button type="submit" class="button button">Create Groups</button>
-      </form>
+      <button type="submit" class="button button">Create Groups</button>
+    </form>
 
-      <div id="region-groups" class="mosaic-row">
+    <div id="region-groups" class="mosaic-row">
 
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </div>
 
 <script type="text/template" id="view-single-list-edit">
