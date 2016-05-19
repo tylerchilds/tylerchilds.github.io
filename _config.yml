@@ -20,3 +20,6 @@ tagline: Design Technologist & Engineer
 
 # Build settings
 markdown: kramdown
+
+sass:
+  style: compressed
