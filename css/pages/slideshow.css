@@ -1,0 +1,13 @@
+.slides{
+  display: none;
+}
+
+.slide{
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide > * {
+  text-align: center;
+  align-self: center;
+}
