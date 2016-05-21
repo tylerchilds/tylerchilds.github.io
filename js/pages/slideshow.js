@@ -17,6 +17,26 @@ Slides.app.on("start", function(){
   });
 });
 
+$(document).on("keyup", function(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  var key = e.which || e.keyCode || 0;
+
+  switch(key){
+    case 37: // left
+      Slides.app.vent.trigger("slide:prev");
+      break;
+    case 13: // enter
+    case 39: // right
+      Slides.app.vent.trigger("slide:next");
+      break;
+    default:
+      break;
+  }
+  console.log(key)
+});
+
 (function(){
   Slides.app.start();
 })();

@@ -1,42 +1,43 @@
 Slides.Behaviors.Controllable = Marionette.Behavior.extend({
-  ui: {
-    next: '.js-next',
-    prev: '.js-prev',
+
+  onShow: function(){
+    _.bindAll(this, 'prev', 'next');
+
+    Slides.app.vent.on("slide:prev", this.prev);
+    Slides.app.vent.on("slide:next", this.next);
   },
 
-  events: {
-    'click @ui.next' : "next",
-    'click @ui.prev' : "prev",
-    'keydown' : "keypress"
+  onDestroy: function(){
+    Slides.app.vent.off("slide:prev");
+    Slides.app.vent.off("slide:next");
   },
 
-  prev: function(e){
-    this.navigate(this.find_prev());
+  prev: function(){
+    this.slide(this.find_prev());
   },
 
-  next: function(e){
-    this.navigate(this.find_next());
+  next: function(){
+    this.slide(this.find_next());
   },
 
-  keypress: function(e){
-    debugger;
-    console.log(e.keyCode || e.which)
+  find_next: function(){
+    return this.current_index() + 1;
   },
 
-  navigate: function(i){
-    Backbone.history.navigate(i, {trigger: true});
+  find_prev: function(){
+    return this.current_index() - 1;
   },
 
   current_index: function(){
     return parseInt(Backbone.history.getFragment().split('/')[0]);
   },
 
-  find_next: function(){
-    return String(this.current_index() + 1);
+  slide: function(i){
+    if(this.within_bounds(i)) Backbone.history.navigate(String(i), {trigger: true});
   },
 
-  find_prev: function(){
-    return String(this.current_index() - 1);
+  within_bounds: function(i){
+    if(0 <= i && i < Slides.$views.length) return true;
   }
 
 });
