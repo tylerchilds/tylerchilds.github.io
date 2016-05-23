@@ -24,11 +24,15 @@ $(document).on("keyup", function(e){
   var key = e.which || e.keyCode || 0;
 
   switch(key){
+    case 33: // page down
     case 37: // left
+    case 38: // up
       Slides.app.vent.trigger("slide:prev");
       break;
     case 13: // enter
+    case 34: // page up
     case 39: // right
+    case 40: // down
       Slides.app.vent.trigger("slide:next");
       break;
     default:

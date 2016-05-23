@@ -29,7 +29,7 @@ Slides.Behaviors.Controllable = Marionette.Behavior.extend({
   },
 
   current_index: function(){
-    return parseInt(Backbone.history.getFragment().split('/')[0]);
+    return parseInt(Backbone.history.getFragment().split('/')[0] || 0);
   },
 
   slide: function(i){

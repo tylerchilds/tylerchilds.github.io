@@ -1,10 +1,14 @@
 Slides.Views.Slide = Backbone.Marionette.ItemView.extend({
-  className: "slide grid",
   tagName: "section",
+  slide: function(){
+    return $(Slides.$views[this.options.index]);
+  },
+  className: function(){
+    return "slide grid " + this.slide().attr('class');
+  },
 
   render: function(){
-    var slide = $(Slides.$views[this.options.index]).html();
-    return this.$el.html(slide);
+    return this.$el.html(this.slide().html());
   },
 
   behaviors: {

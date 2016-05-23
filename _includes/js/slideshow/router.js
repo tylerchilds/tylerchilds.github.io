@@ -1,6 +1,6 @@
 Slides.Router = Marionette.AppRouter.extend({
   appRoutes: {
-    ":index(/:slug)": "render",
+    ":index": "render",
     "*all": "render"
   }
 });
