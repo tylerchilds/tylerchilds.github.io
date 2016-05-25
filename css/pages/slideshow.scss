@@ -3,6 +3,10 @@
 
 @import "variables";
 
+html{
+  font-size: 100%;
+}
+
 body{
   padding-top: 0;
 }
@@ -17,29 +21,38 @@ body{
   cursor: default;
   height: 100%;
   position: relative;
-  user-select: none;
+  overflow: hidden;
+  -webkit-user-select: none;
   -webkit-animation: bg-pulse 60s infinite;
+}
 
-  &:before{
-    bottom: 0;
-    color: $gray1;
-    content: attr(data-content);
-    display: block;
-    font-size: 4rem;
-    left: 0;
-    height: 100vh;
-    line-height: 1;
-    margin: auto;
-    mix-blend-mode: multiply;
-    opacity: .5;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    transform: rotate(270deg);
-    top: 0;
-    white-space: nowrap;
-    width: 100vw;
-  }
+.lead-in__copy{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.lead-in__copy:before{
+  bottom: 2.4rem;
+  color: $gray1;
+  content: attr(data-content);
+  display: block;
+  font-family: $heading;
+  font-size: 20vw;
+  line-height: 1;
+  right: 0;
+  mix-blend-mode: multiply;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(270deg);
+  transform-origin: 100% 100%;
+
+  white-space: nowrap;
+  width: 0;
 }
 
 .slides{

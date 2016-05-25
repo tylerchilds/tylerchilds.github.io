@@ -38,7 +38,6 @@ $(document).on("keyup", function(e){
     default:
       break;
   }
-  console.log(key)
 });
 
 (function(){
