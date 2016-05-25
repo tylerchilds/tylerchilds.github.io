@@ -2,6 +2,7 @@ var Slides = {};
 Slides.Views = {};
 Slides.Behaviors = {};
 
+Slides.start_time = Date.now();
 Slides.$views = $('#js-slides').remove().find("> *");
 Slides.app = new Marionette.Application();
 
