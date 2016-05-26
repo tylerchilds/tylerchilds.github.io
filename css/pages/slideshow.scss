@@ -12,12 +12,14 @@ body{
 }
 
 .blend{
+  -webkit-mix-blend-mode: multiply;
   mix-blend-mode: multiply;
   opacity: .5;
 }
 
 .lead-in{
   background-color: $primary;
+  color: $gray1;
   cursor: default;
   height: 100%;
   position: relative;
@@ -36,23 +38,40 @@ body{
 
 .lead-in__copy:before{
   bottom: 2.4rem;
-  color: $gray1;
   content: attr(data-content);
   display: block;
   font-family: $heading;
   font-size: 20vw;
   line-height: 1;
   right: 0;
-  mix-blend-mode: multiply;
   opacity: .5;
   position: absolute;
   text-align: center;
   text-transform: uppercase;
-  transform: rotate(270deg);
-  transform-origin: 100% 100%;
-
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  -webkit-transform: rotate(270deg);
+  -webkit-transform-origin: 100% 100%;
   white-space: nowrap;
   width: 0;
+}
+
+.lead-in--header{
+  left: 0;
+  height: auto;
+  padding: 1.2rem 2.4rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.lead-in--header:before{
+  color: $white;
+  content: "Example";
+  display: block;
+  font-size: 2.4rem;
+  opacity: .75;
+  text-align: left;
 }
 
 .slides{
@@ -74,8 +93,12 @@ body{
 }
 
 .slide ul{
-  display: inline-block;;
   text-align: left;
+}
+
+.title--muted{
+  color: $gray3;
+  padding-bottom: 0;
 }
 
 .slide--title{
@@ -111,4 +134,33 @@ body{
   80% {background-color: adjust_color($primary, $hue: 180);}
   95% {background-color: adjust_color($primary, $hue: 180);}
   100% {background-color: $primary;}
+}
+
+/*
+
+Examples!
+
+*/
+
+.example--css-basics{
+  h3{
+    color: #f00;
+  }
+
+  p{ letter-spacing: 5px }
+
+  #some-id{ font-style: italic; }
+
+  .some-class{ border-top: 1px solid #0f0; }
+}
+
+.example--css-hover{
+  #css-hover{
+    transition-property: opacity;
+    transition-duration: 2s;
+  }
+
+  #css-hover:hover{
+    opacity: 0;
+  }
 }

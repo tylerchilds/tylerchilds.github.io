@@ -1,6 +1,6 @@
 ---
 layout: blank
-title: "CSS and Javascript: Knowing your toolkit"
+title: "CSS and JavaScript: Knowing your toolkit"
 permalink: /presentations/frontend-toolkit/
 description: A really super simple group generator
 css: slideshow.css
@@ -13,28 +13,33 @@ js: slideshow.js
   <!-- js-slides will be removed on app initialization -->
   <section class="slide--title">
     <div>
-      <h1>CSS and Javascript</h1>
-      <p class="fw-light fs-large blend"><em>Knowing your toolkit</em></p>
+      <h1>CSS and JavaScript</h1>
+      <p class="fw-light fs-large blend"><em>Knowing Your Toolkit</em></p>
     </div>
   </section>
+
+
   <section>
     <div class="column--light lead-in">
-      <div class="lead-in__copy" data-content="Toolkit"></div>
+      <div class="lead-in__copy" data-content="Overview"></div>
     </div>
     <div class="column--heavy">
       <div class="wrapper">
         <h2>Overview</h2>
+        <p>We aim to learn:</p>
         <ol>
-          <li>The purpose of HTML, CSS, and Javascript</li>
-          <li>How CSS and Javascript overlap</li>
+          <li>The basic usage of each: HTML, CSS, and JavaScript</li>
+          <li>Where the usage CSS and JavaScript overlap</li>
         </ol>
         <h3>Objective</h3>
         <p>
-          At a high level, you'll be able to discuss cascading style sheets and javascript while sipping scotch in front of a crackling fire.
+          At a high level, you'll be able to discuss Cascading Style Sheets and JavaScript while sipping scotch in front of a crackling fire.
         </p>
       </div>
     </div>
   </section>
+
+
   <section class="slide--title">
     <div>
       <h3>
@@ -45,22 +50,67 @@ js: slideshow.js
       </p>
     </div>
   </section>
+
+
   <section>
     <div class="column--light lead-in">
-      <div class="lead-in__copy" data-content="HyperText Markup Language"></div>
+      <div class="lead-in__copy" data-content="HTML: HyperText Markup Language"></div>
     </div>
     <div class="column--heavy">
       <div class="wrapper">
-        <h3>Content Structure</h3>
+        <h3>HTML: Content Structure</h3>
         <ul>
-          <li>Heirarchy</li>
-          <li>Classification</li>
+          <li>Content Heirarchy</li>
+          <li>Content Classification</li>
+          <li>Content Attributes</li>
           <li>Form Controls</li>
-          <li>Selectors for CSS and Javascripts</li>
         </ul>
       </div>
     </div>
   </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="HTML: HyperText Markup Language"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h1 class="title--muted">Car Analogy:</h1>
+        <h3>What objects are needed to build a car?</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="HTML: HyperText Markup Language"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>What objects comprise a webpage?</h3>
+        <p>
+          In an web page (HTML document) every tag is an object that lives in the Document Object Model (DOM).
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="HTML: HyperText Markup Language"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>Common HTML Elements</h3>
+        TODO
+      </div>
+    </div>
+  </section>
+
+
   <section class="slide--title">
     <div>
       <h3>
@@ -71,13 +121,15 @@ js: slideshow.js
       </p>
     </div>
   </section>
+
+
   <section>
     <div class="column--light lead-in">
-      <div class="lead-in__copy" data-content="Cascading Style Sheet"></div>
+      <div class="lead-in__copy" data-content="CSS: Cascading Style Sheet"></div>
     </div>
     <div class="column--heavy">
       <div class="wrapper">
-        <h3>User Interface</h3>
+        <h3>CSS: User Interface</h3>
         <ul>
           <li>Layout and Positioning</li>
           <li>Design and Styles</li>
@@ -86,6 +138,103 @@ js: slideshow.js
       </div>
     </div>
   </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="CSS: Cascading Style Sheet"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h1 class="title--muted">Car Analogy:</h1>
+        <h3>What attributes do our car's objects have?</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="CSS: Cascading Style Sheet"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>What attributes do our web page objects have?</h3>
+        <p>
+          In CSS, these attributes are called properties. So how do we apply CSS properties to HTML?
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><h3>Header</h3>
+<p id="some-id">Subtitle</p>
+<p class="some-class">Paragraph</p>
+<p class="some-class">Another paragraph</p></xmp></pre>
+    </div>
+    <div>
+      <h3>Header</h3>
+      <p id="some-id">Subtitle</p>
+      <p class="some-class">Paragraph</p>
+      <p class="some-class">Another paragraph</p>
+    </div>
+  </section>
+
+
+  <section>
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><style type="text/css">
+  h3{
+    color: #f00;
+  }
+
+  p{ letter-spacing: 5px }
+
+  #some-id{ font-style: italic; }
+
+  .some-class{ border-top: 1px solid #0f0; }
+</style></xmp></pre>
+    </div>
+    <div class="example--css-basics">
+      <h3>Header</h3>
+      <p id="some-id">Subtitle</p>
+      <p class="some-class">Paragraph</p>
+      <p class="some-class">Another paragraph</p>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="CSS: Cascading Style Sheet"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>Useful CSS Selectors</h3>
+        TODO
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="CSS: Cascading Style Sheet"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>Useful CSS Properties</h3>
+        TODO
+      </div>
+    </div>
+  </section>
+
+
   <section class="slide--title">
     <div>
       <h3>
@@ -96,13 +245,15 @@ js: slideshow.js
       </p>
     </div>
   </section>
+
+
   <section>
     <div class="column--light lead-in">
-      <div class="lead-in__copy" data-content="Javascript"></div>
+      <div class="lead-in__copy" data-content="JS: JavaScript"></div>
     </div>
     <div class="column--heavy">
       <div class="wrapper">
-        <h3>User Experience</h3>
+        <h3>JS: User Experience</h3>
         <ul>
           <li>User Interaction</li>
           <li>API Communication</li>
@@ -112,6 +263,90 @@ js: slideshow.js
       </div>
     </div>
   </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="JS: JavaScript"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h1 class="title--muted">Car Analogy:</h1>
+        <h3>What actions can we perform on our car's objects?</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="JS: JavaScript"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>What actions can we take on our web page's objects?</h3>
+        <p>
+          In JavaScript, these actions are called events. In our JavaScript, we can listen to these events and handle them accordingly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy lead-in__copy--js" data-content="JS: JavaScript"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>Remedial jQuery (aka: $)</h3>
+        <p>
+          jQuery is a JavaScript library that allows you to use CSS selectors in your Javascript.
+        </p>
+        <p>
+          <code>jQuery</code> is aliased as <code>$</code>, so you can use either one, but <code>$</code> is shorter and easier to follow, so it's pretty rare to see just <code>jQuery</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><p>
+  Coin Toss: <span id="result"></span>
+<p>
+<button id="coin-toss-button">Toss Coin</button>
+
+<script type="text/javascript">
+  $('#coin-toss-button').on('click', function(){
+    $('#result').text(tossCoin());
+  });
+</script></xmp></pre>
+    </div>
+    <div class="example--js-cointoss">
+      <p>
+        Coin Toss: <span id="result"></span>
+      <p>
+      <button id="coin-toss-button">Toss Coin</button>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="column--light lead-in">
+      <div class="lead-in__copy" data-content="JS: JavaScript"></div>
+    </div>
+    <div class="column--heavy">
+      <div class="wrapper">
+        <h3>Useful jQuery Methods</h3>
+        TODO
+      </div>
+    </div>
+  </section>
+
+
   <section class="slide--title">
     <div>
       <h3>The Law of the instrument</h3>
@@ -123,6 +358,59 @@ js: slideshow.js
       <p> - Abraham Maslow</p>
     </div>
   </section>
+
+
+  <section class="wrapper ta-center">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+
+      <h2>Project Requirements</h2>
+      <p>
+        Create the ability to hide content when the user hovers over it.
+      </p>
+    </div>
+  </section>
+
+
+  <section>
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><div id="js-hover">JS Hover.</div>
+<script type="text/javascript">
+  $('#js-hover').on('mouseover', function(){
+    $(this).animate({opacity: 0}, 2000);
+  }).on('mouseout', '#js-hover', function(){
+    $(this).animate({opacity: 1}, 2000);
+  })
+</script></xmp></pre>
+    </div>
+    <div class="example--js-hover">
+      <div id="js-hover">JS Hover.</div>
+    </div>
+  </section>
+
+
+  <section>
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><div id="css-hover">CSS Hover.</div>
+<style type="text/css">
+#whatever{
+  transition-property: opacity;
+  transition-duration: 2s;
+}
+
+#whatever:hover{
+  opacity: 0;
+}
+</style></xmp></pre>
+    </div>
+    <div class="example--css-hover">
+      <div id="css-hover">CSS Hover.</div>
+    </div>
+  </section>
+
+
   <section>
     <div>
 
