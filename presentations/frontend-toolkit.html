@@ -80,7 +80,7 @@ js: slideshow.js
       <div class="wrapper">
         <h3>HTML: Content Structure</h3>
         <ul>
-          <li>Heirarchy</li>
+          <li>Hierarchy</li>
           <li>Classification and Grouping</li>
         </ul>
       </div>
@@ -200,7 +200,7 @@ js: slideshow.js
       <div class="wrapper">
         <h3>What attributes belong to our web components?</h3>
         <p>
-          In CSS, these attributes are called properties. So how do we apply CSS properties to HTML?
+          In CSS, these attributes are called properties.
         </p>
       </div>
     </div>
@@ -266,20 +266,32 @@ p{ letter-spacing: 5px }
             <td>HTML Tag, such as <code>p</code>, <code>header</code>, <code>h3</code>, etc.</td>
           </tr>
           <tr>
+            <td><code>x y</code></td>
+            <td>Descendent</td>
+          </tr>
+          <tr>
             <td><code>.x</code></td>
-            <td>Class name, indicated by the <code>.</code></td>
+            <td>Class</td>
           </tr>
           <tr>
             <td><code>#x</code></td>
-            <td>ID name, indicated by the <code>.</code></td>
+            <td>ID</td>
+          </tr>
+          <tr>
+            <td><code>[x]</code></td>
+            <td>Attribute</td>
+          </tr>
+          <tr>
+            <td><code>[x="y"]</code></td>
+            <td>Attribute with value</td>
           </tr>
           <tr>
             <td><code>::before</code></td>
-            <td>Psuedo Element</td>
+            <td>Pseudo Element</td>
           </tr>
           <tr>
             <td><code>:hover</code></td>
-            <td>Psuedo Class</td>
+            <td>Pseudo Class</td>
           </tr>
           <tr>
             <td><code>x + y</code></td>
@@ -651,7 +663,8 @@ $('.js-hover').on('mouseover', function(){
   <section class="wrapper">
     <div>
       <div class="lead-in lead-in--header" data-content=": HTML &amp; JavaScript Demo"></div>
-<pre><xmp><a href="javascript:;" class="js-tab" data-tab="content-1">
+<pre><xmp>// HTML
+<a href="javascript:;" class="js-tab" data-tab="content-1">
   1st Tab
 </a>
 <a href="javascript:;" class="js-tab" data-tab="content-2">
@@ -667,13 +680,13 @@ $('.js-hover').on('mouseover', function(){
   <section class="wrapper">
     <div>
       <div class="lead-in lead-in--header" data-content=": HTML &amp; JavaScript Demo"></div>
-<pre><xmp>$('.js-tab-content').not(':first').hide();
+<pre><xmp> // JavaScript
+$('.js-tab-content').not(':first').hide();
 
 $('.js-tab').on('click', function(){
   $('.js-tab-content').hide();
 
   var content_id = $(this).data('tab');
-
   $('#' + content_id).show();
 });</xmp></pre>
     </div>
@@ -704,7 +717,8 @@ $('.js-tab').on('click', function(){
   <section class="wrapper">
     <div>
       <div class="lead-in lead-in--header"  data-content=": HTML &amp; CSS Demo"></div>
-<pre><xmp><label for="tab-1">1st Tab</label>
+<pre><xmp>// HTML
+<label for="tab-1">1st Tab</label>
 <label for="tab-2">2nd Tab</label>
 
 <input type="radio" id="tab-1" name="tabs" checked>
