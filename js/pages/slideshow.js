@@ -116,6 +116,7 @@ Slides.examples.js_coin_toss_no_jquery = function(){
   var result = document.getElementById('result');
 
   button.addEventListener('click', function(e){
+    e.stopPropagation();
     result.textContent = Date.now() % 2 ? 'heads' : 'tails';
   });
 };
