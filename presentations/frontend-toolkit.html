@@ -424,8 +424,7 @@ p{ letter-spacing: 5px }
 var button = document.getElementById('coin-toss-button');
 var result = document.getElementById('result');
 
-button.addEventListener('click', function(e){
-  e.stopPropagation();
+button.addEventListener('click', function(){
   result.textContent = Date.now() % 2 ? 'heads' : 'tails';
 });</xmp></pre>
     </div>
