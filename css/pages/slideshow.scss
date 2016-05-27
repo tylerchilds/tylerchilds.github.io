@@ -92,8 +92,14 @@ body{
   z-index: $z_index-1;
 }
 
-.slide ul{
+.slide ul,
+.slide ol{
+  display: inline-block;
   text-align: left;
+}
+
+.slide pre{
+  margin: 70px 0 0;
 }
 
 .title--muted{
@@ -155,12 +161,52 @@ Examples!
 }
 
 .example--css-hover{
-  #css-hover{
+  .hover{
     transition-property: opacity;
     transition-duration: 2s;
   }
 
-  #css-hover:hover{
+  .hover:hover{
     opacity: 0;
   }
+}
+
+.example--css-tabs{
+  label{
+    color: $link;
+    cursor: pointer;
+    display: inline;
+    text-decoration: underline;
+  }
+
+  .tab-content{
+    display: none;
+  }
+
+  #tab-1:checked ~ #content-1{
+    display: block;
+  }
+
+  #tab-2:checked ~ #content-2{
+    display: block;
+  }
+}
+
+.example--css-and-js-tabs{
+
+  .tab-content{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    transform: translate(0, 100px);
+    transition: all 200ms;
+  }
+
+  .tab-content.active{
+    height: auto;
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
 }

@@ -19,6 +19,11 @@ Slides.Views.Slide = Backbone.Marionette.ItemView.extend({
 
   onShow: function(){
     this.set_duration_offset();
+
+    if(this.slide().data()){
+      var function_name = this.slide().data('invoke');
+      if(function_name) Slides.examples[function_name]();
+    }
   },
 
   set_duration_offset: function(){

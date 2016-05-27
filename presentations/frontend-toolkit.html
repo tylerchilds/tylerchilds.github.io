@@ -19,22 +19,14 @@ js: slideshow.js
   </section>
 
 
-  <section>
-    <div class="column--light lead-in">
-      <div class="lead-in__copy" data-content="Overview"></div>
-    </div>
+  <section class="slide--title">
     <div class="column--heavy">
       <div class="wrapper">
         <h2>Overview</h2>
-        <p>We aim to learn:</p>
         <ol>
           <li>The basic usage of each: HTML, CSS, and JavaScript</li>
-          <li>Where the usage CSS and JavaScript overlap</li>
+          <li>Knowing when to use CSS or JavaScript</li>
         </ol>
-        <h3>Objective</h3>
-        <p>
-          At a high level, you'll be able to discuss Cascading Style Sheets and JavaScript while sipping scotch in front of a crackling fire.
-        </p>
       </div>
     </div>
   </section>
@@ -60,10 +52,8 @@ js: slideshow.js
       <div class="wrapper">
         <h3>HTML: Content Structure</h3>
         <ul>
-          <li>Content Heirarchy</li>
-          <li>Content Classification</li>
+          <li>Content Heirarchy and Classification</li>
           <li>Content Attributes</li>
-          <li>Form Controls</li>
         </ul>
       </div>
     </div>
@@ -77,7 +67,7 @@ js: slideshow.js
     <div class="column--heavy">
       <div class="wrapper">
         <h1 class="title--muted">Car Analogy:</h1>
-        <h3>What objects are needed to build a car?</h3>
+        <h3>What components are needed to build a car?</h3>
       </div>
     </div>
   </section>
@@ -89,9 +79,9 @@ js: slideshow.js
     </div>
     <div class="column--heavy">
       <div class="wrapper">
-        <h3>What objects comprise a webpage?</h3>
+        <h3>What components are on a webpage?</h3>
         <p>
-          In an web page (HTML document) every tag is an object that lives in the Document Object Model (DOM).
+          In an web page (HTML document) every element (aka: tag) is an object that lives in the Document Object Model (DOM).
         </p>
       </div>
     </div>
@@ -133,7 +123,6 @@ js: slideshow.js
         <ul>
           <li>Layout and Positioning</li>
           <li>Design and Styles</li>
-          <li>Simple animations and interactions</li>
         </ul>
       </div>
     </div>
@@ -147,7 +136,7 @@ js: slideshow.js
     <div class="column--heavy">
       <div class="wrapper">
         <h1 class="title--muted">Car Analogy:</h1>
-        <h3>What attributes do our car's objects have?</h3>
+        <h3>What attributes do the components of our car have?</h3>
       </div>
     </div>
   </section>
@@ -159,7 +148,7 @@ js: slideshow.js
     </div>
     <div class="column--heavy">
       <div class="wrapper">
-        <h3>What attributes do our web page objects have?</h3>
+        <h3>What attributes do our web components have?</h3>
         <p>
           In CSS, these attributes are called properties. So how do we apply CSS properties to HTML?
         </p>
@@ -168,37 +157,22 @@ js: slideshow.js
   </section>
 
 
-  <section>
+  <section class="wrapper">
     <div>
       <div class="lead-in lead-in--header"></div>
 <pre><xmp><h3>Header</h3>
 <p id="some-id">Subtitle</p>
 <p class="some-class">Paragraph</p>
-<p class="some-class">Another paragraph</p></xmp></pre>
-    </div>
-    <div>
-      <h3>Header</h3>
-      <p id="some-id">Subtitle</p>
-      <p class="some-class">Paragraph</p>
-      <p class="some-class">Another paragraph</p>
-    </div>
-  </section>
+<p class="some-class">Another paragraph</p>
 
+h3{ color: #f00; }
 
-  <section>
-    <div>
-      <div class="lead-in lead-in--header"></div>
-<pre><xmp><style type="text/css">
-  h3{
-    color: #f00;
-  }
+p{ letter-spacing: 5px }
 
-  p{ letter-spacing: 5px }
+#some-id{ font-style: italic; }
 
-  #some-id{ font-style: italic; }
-
-  .some-class{ border-top: 1px solid #0f0; }
-</style></xmp></pre>
+.some-class{ border-top: 1px solid #0f0; }
+</xmp></pre>
     </div>
     <div class="example--css-basics">
       <h3>Header</h3>
@@ -256,9 +230,7 @@ js: slideshow.js
         <h3>JS: User Experience</h3>
         <ul>
           <li>User Interaction</li>
-          <li>API Communication</li>
           <li>Event Handling</li>
-          <li>Complex Animation</li>
         </ul>
       </div>
     </div>
@@ -301,7 +273,7 @@ js: slideshow.js
       <div class="wrapper">
         <h3>Remedial jQuery (aka: $)</h3>
         <p>
-          jQuery is a JavaScript library that allows you to use CSS selectors in your Javascript.
+          jQuery is a JavaScript library that allows you to use CSS selectors in your Javascript. <em>(It also can do a lot more, but that's a whole other presentation).</em>
         </p>
         <p>
           <code>jQuery</code> is aliased as <code>$</code>, so you can use either one, but <code>$</code> is shorter and easier to follow, so it's pretty rare to see just <code>jQuery</code>.
@@ -311,21 +283,40 @@ js: slideshow.js
   </section>
 
 
-  <section>
+  <section class="wrapper" data-invoke="js_coin_toss_no_jquery">
     <div>
       <div class="lead-in lead-in--header"></div>
-<pre><xmp><p>
-  Coin Toss: <span id="result"></span>
-<p>
+<pre><xmp>
+Coin Toss: <span id="result"></span>
 <button id="coin-toss-button">Toss Coin</button>
 
-<script type="text/javascript">
-  $('#coin-toss-button').on('click', function(){
-    $('#result').text(tossCoin());
-  });
-</script></xmp></pre>
+$('#coin-toss-button').on('click', function(){
+  $('#result').text(tossCoin());
+});</xmp></pre>
     </div>
     <div class="example--js-cointoss">
+      <h3>Without jQuery</h3>
+      <p>
+        Coin Toss: <span id="result"></span>
+      <p>
+      <button id="coin-toss-button">Toss Coin</button>
+    </div>
+  </section>
+
+
+  <section class="wrapper" data-invoke="js_coin_toss">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp>
+Coin Toss: <span id="result"></span>
+<button id="coin-toss-button">Toss Coin</button>
+
+$('#coin-toss-button').on('click', function(){
+  $('#result').text(tossCoin());
+});</xmp></pre>
+    </div>
+    <div class="example--js-cointoss">
+      <h3>With jQuery</h3>
       <p>
         Coin Toss: <span id="result"></span>
       <p>
@@ -363,59 +354,297 @@ js: slideshow.js
   <section class="wrapper ta-center">
     <div>
       <div class="lead-in lead-in--header"></div>
-
-      <h2>Project Requirements</h2>
-      <p>
-        Create the ability to hide content when the user hovers over it.
-      </p>
+      <h2>Requirements:</h2>
+      <ol>
+        <li>Create the ability to hide content when the user hovers over it.</li>
+      </ol>
     </div>
   </section>
 
 
-  <section>
+  <section class="wrapper" data-invoke="js_hover">
     <div>
       <div class="lead-in lead-in--header"></div>
-<pre><xmp><div id="js-hover">JS Hover.</div>
+<pre><xmp><div class="js-hover">JS Hover.</div>
+
 <script type="text/javascript">
-  $('#js-hover').on('mouseover', function(){
+  $('.js-hover').on('mouseover', function(){
     $(this).animate({opacity: 0}, 2000);
-  }).on('mouseout', '#js-hover', function(){
+  }).on('mouseout', function(){
     $(this).animate({opacity: 1}, 2000);
   })
 </script></xmp></pre>
     </div>
     <div class="example--js-hover">
-      <div id="js-hover">JS Hover.</div>
+      <div class="js-hover">JS Hover.</div>
     </div>
   </section>
 
 
-  <section>
+  <section class="wrapper">
     <div>
       <div class="lead-in lead-in--header"></div>
-<pre><xmp><div id="css-hover">CSS Hover.</div>
-<style type="text/css">
-#whatever{
-  transition-property: opacity;
-  transition-duration: 2s;
-}
+<pre><xmp><div class="hover">CSS Hover.</div>
 
-#whatever:hover{
-  opacity: 0;
-}
+<style type="text/css">
+  .hover{
+    transition-property: opacity;
+    transition-duration: 2s;
+  }
+
+  .hover:hover{
+    opacity: 0;
+  }
 </style></xmp></pre>
     </div>
     <div class="example--css-hover">
-      <div id="css-hover">CSS Hover.</div>
+      <div class="hover">CSS Hover.</div>
     </div>
   </section>
 
 
-  <section>
+  <section class="slide--title">
     <div>
-
+      <h2>Compare and Contrast</h2>
+      <p>
+        Which solution was easier to follow along with?
+      </p>
+      <p>
+        Which solution would be easier to maintain?
+      </p>
     </div>
   </section>
+
+
+  <section class="wrapper ta-center">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+      <h2>Requirements:</h2>
+      <ol>
+        <li>Create tabs to show and hide content.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="slide--title">
+    <div>
+      <h2>JavaScript Implementation</h2>
+    </div>
+  </section>
+
+
+  <section class="wrapper">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><a href="javascript:;" class="js-tab" data-tab="content-1">
+  1st Tab
+</a>
+<a href="javascript:;" class="js-tab" data-tab="content-2">
+  2nd Tab
+</a>
+
+<p class="js-tab-content" id="content-1">First Content</p>
+<p class="js-tab-content" id="content-2">Second Content</p></xmp></pre>
+    </div>
+  </section>
+  <section class="wrapper">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp>$('.js-tab-content').not(':first').hide();
+
+$('.js-tab').on('click', function(){
+  $('.js-tab-content').hide();
+
+  var content = $(this).data('tab');
+
+  $('#' + content).show();
+});</xmp></pre>
+    </div>
+  </section>
+
+
+  <section class="wrapper ta-center" data-invoke="js_tabs">
+    <div class="example--js-tabs">
+      <div class="lead-in lead-in--header"></div>
+
+      <h3>Javascript Tabs</h3>
+      <a href="javascript:;" class="js-tab" data-tab="content-1">1st Tab</a>
+      <a href="javascript:;" class="js-tab" data-tab="content-2">2nd Tab</a>
+
+      <p class="js-tab-content" id="content-1">First Content</p>
+      <p class="js-tab-content" id="content-2">Second Content</p>
+    </div>
+  </section>
+
+
+  <section class="slide--title">
+    <div>
+      <h2>CSS Implementation</h2>
+    </div>
+  </section>
+
+
+  <section class="wrapper">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><label for="tab-1">1st Tab</label>
+<label for="tab-2">2nd Tab</label>
+
+<input type="radio" id="tab-1" name="tabs" checked>
+<input type="radio" id="tab-2" name="tabs">
+
+<p class="tab-content" id="content-1">First Content</p>
+<p class="tab-content" id="content-2">Second Content</p></xmp></pre>
+    </div>
+  </section>
+
+
+  <section class="wrapper">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp>.tab-content{
+  display: none;
+}
+[name="tabs"]{
+  display: none;
+}
+#tab-1:checked ~ #content-1{
+  display: block;
+}
+#tab-2:checked ~ #content-2{
+  display: block;
+}</xmp></pre>
+    </div>
+  </section>
+
+
+  <section class="wrapper ta-center" data-invoke="css_tabs">
+    <div class="example--css-tabs">
+      <div class="lead-in lead-in--header"></div>
+
+      <h3>CSS Tabs</h3>
+      <label for="tab-1">1st Tab</label>
+      <label for="tab-2">2nd Tab</label>
+
+      <input type="radio" id="tab-1" name="tabs" checked>
+      <input type="radio" id="tab-2" name="tabs">
+
+      <p class="tab-content" id="content-1">First Content</p>
+      <p class="tab-content" id="content-2">Second Content</p>
+    </div>
+  </section>
+
+  <section class="slide--title">
+    <div>
+      <h2>Compare and Contrast</h2>
+      <p>
+        Which solution was easier to follow along with?
+      </p>
+      <p>
+        Which solution would be easier to maintain?
+      </p>
+    </div>
+  </section>
+
+
+  <section class="wrapper ta-center">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+      <h2>Updated Requirements:</h2>
+      <ol>
+        <li>Create tabs to show and hide content.</li>
+        <li><strong>Animate content on change.</strong></li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section class="slide--title">
+    <div>
+      <h2>CSS and Javascript</h2>
+      <p class="fw-light fs-large blend"><em>Finally, best friends forever.</em></p>
+    </div>
+  </section>
+
+
+  <section class="wrapper">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp><a href="javascript:;" class="js-tab" data-tab="content-1">
+  1st Tab
+</a>
+<a href="javascript:;" class="js-tab" data-tab="content-2">
+  2nd Tab
+</a>
+
+<p class="tab-content active" id="content-1">First Content</p>
+<p class="tab-content" id="content-2">Second Content</p></xmp></pre>
+    </div>
+  </section>
+
+
+  <section class="wrapper">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp>.tab-content{
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  transform: translate(0, 100px);
+  transition: all 200ms;
+}
+
+.tab-content.active{
+  height: auto;
+  opacity: 1;
+  transform: translate(0, 0);
+}</xmp></pre>
+    </div>
+  </section>
+
+
+  <section class="wrapper">
+    <div>
+      <div class="lead-in lead-in--header"></div>
+<pre><xmp>$('.js-tab').on('click', function(e){
+  $('.tab-content').removeClass('active');
+
+  var content = $(this).data('tab');
+
+  $('#' + content).addClass('active');
+});</xmp></pre>
+    </div>
+  </section>
+
+
+  <section class="wrapper ta-center" data-invoke="css_and_js_tabs">
+    <div class="example--css-and-js-tabs">
+      <div class="lead-in lead-in--header"></div>
+
+      <h3>CSS and Javascript Tabs</h3>
+      <a href="javascript:;" class="js-tab" data-tab="content-1">1st Tab</a>
+      <a href="javascript:;" class="js-tab" data-tab="content-2">2nd Tab</a>
+
+      <p class="tab-content active" id="content-1">First Content</p>
+      <p class="tab-content" id="content-2">Second Content</p>
+    </div>
+  </section>
+
+
+  <section class="slide--title">
+    <div>
+      <h1><em>Questions?</em></h1>
+      <p>
+        <em>
+          I don't bite.
+        </em>
+      </p>
+    </div>
+  </section>
+
+
   <section class="slide--title">
     <div>
       <h1><em>Fin.</em></h1>

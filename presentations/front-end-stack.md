@@ -47,13 +47,11 @@ Ja·va·Script
 
 ## The Overlap
 
-_Law of the instrument_
+__
 
 "I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail." - Abraham Maslow
 
-Basic actions involving certain click, hover, and focus can all be handled by CSS, Javascript or both together.
 
-So how do you know which one to use?
 
 ### Usually both
 
