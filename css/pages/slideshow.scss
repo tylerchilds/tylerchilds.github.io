@@ -57,21 +57,26 @@ body{
 }
 
 .lead-in--header{
+  color: $white;
+  display: block;
   left: 0;
+  font-size: 2.4rem;
   height: auto;
   padding: 1.2rem 2.4rem;
   position: fixed;
+  text-align: left;
   top: 0;
   right: 0;
 }
 
 .lead-in--header:before{
-  color: $white;
   content: "Example";
-  display: block;
-  font-size: 2.4rem;
   opacity: .75;
-  text-align: left;
+}
+
+.lead-in--header:after{
+  content: attr(data-content);
+  opacity: .75;
 }
 
 .slides{
@@ -161,13 +166,14 @@ Examples!
 }
 
 .example--css-hover{
-  .hover{
-    transition-property: opacity;
-    transition-duration: 2s;
+  .hidden{
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 2s;
   }
 
-  .hover:hover{
-    opacity: 0;
+  .hoverable:hover .hidden{
+    opacity: 1;
   }
 }
 
@@ -179,15 +185,12 @@ Examples!
     text-decoration: underline;
   }
 
-  .tab-content{
+  .tab-content,
+  [name="tabs"]{
     display: none;
   }
 
-  #tab-1:checked ~ #content-1{
-    display: block;
-  }
-
-  #tab-2:checked ~ #content-2{
+  [name="tabs"]:checked + .tab-content{
     display: block;
   }
 }
@@ -199,14 +202,14 @@ Examples!
     opacity: 0;
     overflow: hidden;
     padding: 0;
-    transform: translate(0, 100px);
-    transition: all 200ms;
+    -webkit-transform: translate(0, 100px);
+    -webkit-transition: all 200ms;
   }
 
   .tab-content.active{
     height: auto;
     opacity: 1;
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
   }
 
 }
