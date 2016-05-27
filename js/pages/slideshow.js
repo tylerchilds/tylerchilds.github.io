@@ -32,6 +32,10 @@ $(document).on("click", function(e){
   navigate(e.button);
 });
 
+$(document).on("click", 'a', function(e){
+  e.stopPropagation();
+});
+
 var navigate = function(key){
   console.log(key);
   switch(key){
