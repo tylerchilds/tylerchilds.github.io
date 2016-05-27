@@ -107,6 +107,14 @@ body{
   margin: 70px 0 0;
 }
 
+.slide td code{
+  white-space: nowrap;
+}
+
+.slide td{
+  font-size: 1.4rem;
+}
+
 .title--muted{
   color: $gray3;
   padding-bottom: 0;
