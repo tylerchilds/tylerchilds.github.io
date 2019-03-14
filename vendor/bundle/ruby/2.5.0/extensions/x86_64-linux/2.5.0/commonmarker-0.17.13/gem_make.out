@@ -1,5 +1,5 @@
 current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/commonmarker-0.17.13/ext/commonmarker
-/usr/bin/ruby2.5 -r ./siteconf20190313-3658-1wa6i8g.rb extconf.rb
+/usr/bin/ruby2.5 -r ./siteconf20190313-934-162hihp.rb extconf.rb
 creating Makefile
 
 current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/commonmarker-0.17.13/ext/commonmarker
@@ -67,4 +67,4 @@ linking shared-object commonmarker/commonmarker.so
 
 current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/commonmarker-0.17.13/ext/commonmarker
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20190313-3658-11k7z1s/commonmarker
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20190313-934-1u6q3hg/commonmarker

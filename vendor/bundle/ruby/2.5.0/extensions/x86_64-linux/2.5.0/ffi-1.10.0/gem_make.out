@@ -1,5 +1,5 @@
 current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/ffi-1.10.0/ext/ffi_c
-/usr/bin/ruby2.5 -r ./siteconf20190313-3658-rw8g58.rb extconf.rb
+/usr/bin/ruby2.5 -r ./siteconf20190313-934-1p6kv27.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... no
 checking for shlwapi.h... no
@@ -120,7 +120,6 @@ make[3]: Entering directory '/home/tyler/github/tylerchilds.github.io/vendor/bun
 make[3]: Nothing to be done for 'all'.
 make[3]: Leaving directory '/home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-linux-gnu/man'
 make[3]: Entering directory '/home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-linux-gnu'
-make[3]: Nothing to be done for 'all-am'.
 make[3]: Leaving directory '/home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-linux-gnu'
 make[2]: Leaving directory '/home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-linux-gnu'
 make[1]: Leaving directory '/home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/ffi-1.10.0/ext/ffi_c/libffi-x86_64-linux-gnu'
@@ -158,4 +157,4 @@ compiling Types.c
 compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.so
-/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20190313-3658-pz70sj
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20190313-934-1dd75h8
