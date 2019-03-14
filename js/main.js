@@ -1528,11 +1528,11 @@ $(function(){
 	$(window).on('load resize', function(){
 		$('body').css('padding-bottom', $('footer').outerHeight() + 'px');
 
-		if( $(window).width() > 960 ){
-			$('body').css('padding-top', $('header').outerHeight() + 'px');
-		} else {
-			$('body').css('padding-top', 0 + 'px');
-		}
+		// if( $(window).width() > 960 ){
+		// 	$('body').css('padding-top', $('header').outerHeight() + 'px');
+		// } else {
+		// 	$('body').css('padding-top', 0 + 'px');
+		// }
 	});
 
 	//
