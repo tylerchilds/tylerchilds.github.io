@@ -349,19 +349,17 @@ your styles be more expressive with less effort.
 
 ## Mixins
 
-A Mixin, in regards to Custom Properties, are when we declare functions as our
-Custom Property values. The arguments for the functions are other Custom
-Properties that will recalculate our function when they are changed. This
+A Mixin, in regards to Custom Properties, is a function declared as a
+Custom Property value. The arguments for the mixin are other Custom
+Properties that will recalculate our mixin when they are changed. This
 recalculation will then cause our styles to update.
 
-**Pardon?** Well, now that we got all that out of the way, what does that mean?
-
-Technically the `.custom` ruleset above is a Mixin, we can set the `--hue`
+The `.custom` ruleset above is a Mixin, since we can set the `--hue`
 and then our four link states recalculate and get styled.
 
 ### Baseline Grid Foundation
 
-Let's learn more about mixins by creating a Baseline Grid to help with  Vertical
+Let's learn more about mixins by creating a Baseline Grid to help with Vertical
 Rhythm. This way our content has a pleasant cadence by utilizing a consistent
 spacing.
 
@@ -395,12 +393,12 @@ We've applied the ruleset for our baseline grid to `.baseline` elements and all
 of their children. Setting our Mixins using a wildcard selector gives all of
 the matching elements access to the mixins, so that we can use them anywhere.
 
-**A quick breakdown of the Custom Properties for our Baseline Grid**
+#### A quick breakdown of the Custom Properties for our Baseline Grid
 
 * `--rhythm` the foundation of our Baseline and can be used for spacing as needed
 * `--line-height` is set to our`--rhythm` by default, since `--sub-rhythm` is not set here
   * `--sub-rhythm` allows us to alter our `--line-height` and subsequently `--font-size`, while maintaining the overall Baseline Grid.
-* `--line-height-ratio` helps us have a nice spacing between our lines of text
+* `--line-height-ratio` helps us have a nice spacing between lines of text
 * `--font-size` is calculated by dividing our `--line-height` by our `--line-height-ratio`
 
 We also set our `.baseline` ruleset to use the `--font-size` and `--line-height` from our Baseline Grid.
@@ -478,8 +476,8 @@ To get started with our baseline grid let's create a tiny webpage. We'll use our
 
 For this example, we're essentially utilizing two mixins: `--line-height` and
 `--font-size`. For our `h2` and `p`, we need to set the properties `font-size`
-and `line-height` to their Custom Property counterparts. This is because these
-custom properties have been recalculated in those rulesets, but they need to be
+and `line-height` to their Custom Property counterparts. This is because our
+mixins have been recalculated in those rulesets, but they need to be
 set before the updated styling will be applied to them.
 
 #### Word of Caution
@@ -541,19 +539,41 @@ inline on our grid element.
     <img src="https://www.placecage.com/gif/900/600" alt="Nic Cage gif" />
 </div>
 
-### Party Links
+## Wrap Up
 
-In conclusion, thanks for reading this far. As a special thank you, let's do one
-final example. What if we took our `.custom-link` example and turned it up to 
-eleven with some animation?
+In conclusion, Custom Properties are very powerful, especially when you use them
+with different patterns.
+
+* Variables
+* Default Values
+* Cascading Values
+* Scoped Properties
+* Mixins
+* Inline Custom Properties
+
+If you know of any other patterns, let us know in the comments.
+
+### Send Off
+
+For our closing cermony, let's animate the color of each character of a phrase
+and let's use inline Custom Properties as our offsets.
 
 ```
 @keyframes rainbow-link {
     0% {
-        --hue: var(--start-hue);
+        color: hsl(calc(360 - var(--offset)), 60%, 50%);
+    }
+    25% {
+        color: hsl(calc(450 - var(--offset)), 60%, 50%);
+    }
+    50% {
+        color: hsl(calc(540 - var(--offset)), 60%, 50%);
+    }
+    75% {
+        color: hsl(calc(630 - var(--offset)), 60%, 50%);
     }
     100% {
-        --hue: calc(360 + var(--start-hue));
+        color: hsl(calc(720 - var(--offset)), 60%, 50%);
     }
 }
 
@@ -565,24 +585,54 @@ eleven with some animation?
 <style type="text/css">
 @keyframes rainbow-link {
     0% {
-        color: hsl(var(--start-hue), 60%, 50%);
+        color: hsl(calc(360 - var(--offset)), 60%, 50%);
+    }
+    25% {
+        color: hsl(calc(450 - var(--offset)), 60%, 50%);
+    }
+    50% {
+        color: hsl(calc(540 - var(--offset)), 60%, 50%);
+    }
+    75% {
+        color: hsl(calc(630 - var(--offset)), 60%, 50%);
     }
     100% {
-        color: hsl(calc(360 + var(--start-hue)), 60%, 50%);
+        color: hsl(calc(720 - var(--offset)), 60%, 50%);
     }
 }
 
 .rainbow {
-    --start-hue: 0;
-    animation: rainbow-link 6s infinite;
+    --offset: 0;
+    animation: rainbow-link 5000ms linear infinite;
+    font-weight: bold;
 }
 </style>
 
 <h2>
-    <span class="rainbow" style="--start-hue: 0">Thank</span>
-    <span class="rainbow" style="--start-hue: 60">you</span>
-    <span class="rainbow" style="--start-hue: 120">for</span>
-    <span class="rainbow" style="--start-hue: 180">reading</span>
-    <span class="rainbow" style="--start-hue: 240">this</span>
-    <span class="rainbow" style="--start-hue: 300">article!</span>
+    <span
+        class="rainbow" style="--offset:   0">T</span><span
+        class="rainbow" style="--offset:  19">h</span><span
+        class="rainbow" style="--offset:  38">a</span><span
+        class="rainbow" style="--offset:  57">n</span><span
+        class="rainbow" style="--offset:  76">k</span>
+    
+    <span
+        class="rainbow" style="--offset:  95">y</span><span
+        class="rainbow" style="--offset: 114">o</span><span
+        class="rainbow" style="--offset: 133">u</span>
+    
+    <span
+        class="rainbow" style="--offset: 152">f</span><span
+        class="rainbow" style="--offset: 171">o</span><span
+        class="rainbow" style="--offset: 180">r</span>
+    
+    <span
+        class="rainbow" style="--offset: 199">R</span><span
+        class="rainbow" style="--offset: 218">e</span><span
+        class="rainbow" style="--offset: 237">a</span><span
+        class="rainbow" style="--offset: 256">d</span><span
+        class="rainbow" style="--offset: 275">i</span><span
+        class="rainbow" style="--offset: 294">n</span><span
+        class="rainbow" style="--offset: 313">g</span><span
+        class="rainbow" style="--offset: 332">!</span>
 </h2>
