@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include redesign/head.html %}
+  <body>
+    <header class="header">
+        <h1>
+            {{ site.title }}
+        </h1>
+        <h4>
+            {{ site.tagline }}
+        </h4>
+    </header>
+    <!-- <nav class="navigation">
+        <ul>
+            <li>
+                <a href="#">Link 1</a>
+            </li>
+            <li>
+                <a href="#">Link 2</a>
+            </li>
+            <li>
+                <a href="#">Link 3</a>
+            </li>
+        </ul>
+    </nav> -->
+    <main class="main">
+        {{ content }}
+    </main>
+    <footer class="footer">
+        <section class="grid">
+            <p>
+                &hearts; <a href="https://www.tylerchilds.com">Tyler Childs</a>
+            </p>
+            <p class="ta-right">
+                ©2019
+            </p>
+        </section>
+    </footer>
+    {% include redesign/scripts.html %}
+  </body>
+</html>
