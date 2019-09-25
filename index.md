@@ -62,3 +62,9 @@ permalink: /
 * <a href="mailto:tylerchilds@bamzap.pw">tylerchilds@bamzap.pw</a>
 
 ---
+
+#### About
+
+Built with Cutestrap and [only these few extra lines of CSS](https://www.tylerchilds.com/css/redesign/main.css)
+
+---

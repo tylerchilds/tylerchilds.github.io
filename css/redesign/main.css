@@ -12,12 +12,7 @@
 /* Theme Specific Styles */
 
 html {
-  --color-primary-shade1: hsl(200, 80%, 60%);
-  --color-primary: hsl(200, 80%, 45%);
-  --color-primary-tint1: hsl(200, 80%, 35%);
-  --color-accent-shade1: hsl(50, 80%, 60%);
-  --color-accent: hsl(50, 80%, 45%);
-  --color-accent-tint1: hsl(50, 80%, 35%);
+  --font-heading: "PT Sans", Futura, "Trebuchet MS", Arial, sans-serif;
   --font-family: "Source Sans Pro", Verdana, Geneva, sans-serif;
 }
 
@@ -46,20 +41,3 @@ body{
 .header h1 {
   margin-bottom: var(--rhythm);
 }
-
-.navigation {
-  text-align: center;
-}
-
-.navigation ul {
-  display: flex;
-  list-style-type: none;
-  margin-left: 0;
-  justify-content: center;
-}
-
-.navigation li {
-  padding: 0 var(--rhythm-half);
-}
-
-
