@@ -2,14 +2,9 @@
 
 
 * {
-  /* Sets our Baseline Grid */
   --rhythm: 2rem;
-
-  /* Sets font-size relative to rhythm */
   --line-height-ratio: 1.5;
 }
-
-/* Theme Specific Styles */
 
 html {
   --font-heading: "PT Sans", Futura, "Trebuchet MS", Arial, sans-serif;
@@ -17,25 +12,16 @@ html {
 }
 
 body {
-  background: hsl(50, 50%, 95%);
-  color: hsl(200, 50%, 30%);
+  background: hsl(15, 60%, 98%);
+  color: hsl(205, 80%, 30%);
+  padding: var(--rhythm) var(--rhythm-half);
+  margin: 0 auto;
+  max-width: 50rem;
 }
 
 h2,
 h3 {
   --rhythm: 1rem;
-}
-
-/* Layout Specific Styles */
-
-body{
-  padding: var(--rhythm) var(--rhythm-half);
-  margin: 0 auto;
-  max-width: 65rem;
-}
-
-.header {
-  text-align: center;
 }
 
 .header h1 {

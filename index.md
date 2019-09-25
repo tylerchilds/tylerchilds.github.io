@@ -5,6 +5,18 @@ permalink: /
 ---
 
 ---
+## About
+
+
+Over the years the common thread through my career is curiosity. I'm always
+experimenting with and trying new technologies and incorporating them into my
+work when they make sense.
+
+I'm also a rabid minimalist and always looking to simplify, so what I'm using
+at the end of the day has purpose and intent. I'm allergic to over-engineered
+solutions.
+
+---
 
 ## Projects
 * [Cutestrap](https://www.cutestrap.com) - A strong, independent CSS Framework. Only 2.7KB minified & gzipped
@@ -63,8 +75,14 @@ permalink: /
 
 ---
 
-#### About
+#### Epilogue
 
-Built with Cutestrap and [only these few extra lines of CSS](https://www.tylerchilds.com/css/redesign/main.css)
+In my spare time, I enjoy tinkering with and building stuff. Also video games,
+reading graphic novels, watching Netflix or hanging out with the dogs.
+
+I also enjoy eating food and try and find the best food that's also cheap. This
+means taqueria tacos are the best.
+
+This was built with Cutestrap and [only these few extra lines of CSS](https://www.tylerchilds.com/css/redesign/main.css)
 
 ---
