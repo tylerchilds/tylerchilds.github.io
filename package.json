@@ -1,0 +1,24 @@
+{
+  "name": "tylerchilds.github.io",
+  "version": "1.0.0",
+  "description": "Home of Tyler Childs",
+  "main": "n",
+  "dependencies": {
+    "cutestrap": "^2.0.0-2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cp -r ./node_modules/cutestrap/dist/css/* ./css/cutestrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerchilds/tylerchilds.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylerchilds/tylerchilds.github.io/issues"
+  },
+  "homepage": "https://tylerchilds.com"
+}
