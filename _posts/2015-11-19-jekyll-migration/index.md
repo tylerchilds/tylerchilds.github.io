@@ -1,7 +1,10 @@
 ---
-layout: post
+layout: blog/post
 title:  "Jekyll Migration!"
 date:   2015-11-19 2:41:00 -0800
+permalink: /posts/jekyll-migration
+description: >
+  A throwaway post about migrating to Jekyll
 categories: development
 ---
 

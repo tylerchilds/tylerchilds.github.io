@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<section class="wrapper">
+  <div class="post-list">
+    {% for post in site.posts limit:3 %}
+      {% include blog/snippet.html post=post %}
+    {% endfor %}
+  </div>
+  <hr />
+  <h2>Archive of All Posts</h2>
+  {% for post in site.posts %}
+    {% assign currentdate = post.date | date: "%Y" %}
+    {% if currentdate != date %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h3 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h3>
+      <ul class="archive-list">
+      {% assign date = currentdate %}
+    {% endif %}
+
+    <li>
+      {% include blog/short_snippet.html post=post %}
+    </li>
+
+    {% if forloop.last %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</section>
+  

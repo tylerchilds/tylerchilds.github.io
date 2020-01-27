@@ -1,10 +1,10 @@
 ---
-layout: redesign/redesign
-title: Welcome to the Digital World
-permalink: /
+layout: page
+title: Resume
+permalink: /resume
+weight: 30
 ---
 
----
 ## About
 
 
@@ -82,7 +82,5 @@ reading graphic novels, watching Netflix or hanging out with the dogs.
 
 I also enjoy eating food and try and find the best food that's also cheap. This
 means taqueria tacos are the best.
-
-This was built with Cutestrap and [only these few extra lines of CSS](https://www.tylerchilds.com/css/redesign/main.css)
 
 ---
