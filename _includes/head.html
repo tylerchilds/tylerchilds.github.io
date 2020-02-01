@@ -118,24 +118,26 @@
         .site-brand,
         .site-nav {
             display: flex;
+            justify-content: center;
             align-content: center;
         }
 
         .site-brand {
             grid-area: sitebrand;
             padding: 0;
-            text-align: left;
         }
 
         .site-nav {
             grid-area: sitenav;
-            text-align: right;
         }
 
         @media (min-width: 55rem) {
-            .site-brand,
+            .site-brand {
+                justify-content: flex-start;
+            }
+
             .site-nav {
-                text-align: center;
+                justify-content: flex-end;
             }
         }
 		.nav-item-wrapper {
@@ -155,4 +157,5 @@
 	{% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <script src="{{ "/js/libraries/fly-frames/index.js" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}" type="module"></script>
 </head>
