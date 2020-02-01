@@ -115,41 +115,10 @@ footer {
 }
 
 /*
-  2.3: Homepage Layout
+  2.3: Two Column Layout
 */
 
-.layout-homepage {
-  display: grid;
-  grid-template-areas: "promoted promoted recent"
-                       "featured basics categories";
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.area-promoted {
-  grid-area: promoted;
-}
-
-.area-recent {
-  grid-area: recent;
-}
-
-.area-featured {
-  grid-area: featured;
-}
-
-.area-basics {
-  grid-area: basics;
-}
-
-.area-categories {
-  grid-area: categories;
-}
-
-/*
-  2.4: Two Column Layout
-*/
-
-.layout-two-column {
+.layout-default {
   display: grid;
   grid-template-areas:  "title"
                         "main"
@@ -159,7 +128,7 @@ footer {
 }
 
 @media (min-width: 55rem) {
-  .layout-two-column {
+  .layout-default {
     grid-template-areas: "sidebar main";
     grid-template-columns: minmax(20rem, auto) minmax(60vw, 65rem);
     column-gap: var(--gutter-width);

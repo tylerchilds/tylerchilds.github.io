@@ -17,7 +17,7 @@ But it's 2020 now and I'd like you to subscribe via RSS, if you're open to follo
 
 ### Who am I?
 
-Born and rasied on Cape Cod in Massachusetts, I grew an appreciation for the simple things in life early on, sand in my shoes and all that jazz. I've been gone from that life almost a decade doing a stint in Virginia for a few years and currently residing in sunny California.
+Born and raised on Cape Cod in Massachusetts, I grew an appreciation for the simple things in life early on, sand in my shoes and all that jazz. I've been gone from that life almost a decade doing a stint in Virginia for a few years and currently residing in sunny California.
 
 In my spare time, I'd like to pretend I do a lot of things because I aspire to do a lot of things, but I don't. So realistically, you can catch me playing video games or writing blog posts and making content on the side.
 
