@@ -11,6 +11,8 @@
       <div class="page-header">
         {% if site.data.cats[page.cat].name %}
           {% assign page_title = site.data.cats[page.cat].name %}
+        {% elsif page.title-html %}
+          {% assign page_title = page.title-html %}
         {% else %}
           {% assign page_title = page.title %}
         {% endif %}

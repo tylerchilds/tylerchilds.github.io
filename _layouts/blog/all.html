@@ -9,7 +9,7 @@ layout: default
     {% endfor %}
   </div>
   <hr />
-  <h2>Archive of All Posts</h2>
+  <h2>All Posts</h2>
   {% for post in site.posts %}
     {% assign currentdate = post.date | date: "%Y" %}
     {% if currentdate != date %}

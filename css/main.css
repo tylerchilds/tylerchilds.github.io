@@ -71,6 +71,7 @@ footer {
   display: grid;
   column-gap: var(--gutter-width);
   grid-template-columns: repeat(2, 1fr);
+  align-items: end;
 }
 
 /*
@@ -82,8 +83,6 @@ footer {
 .site-title:hover,
 .site-title:focus,
 .site-title:active {
-  color: var(--gray1);
-  font-family: monospace;
   text-decoration: none;
 }
 
@@ -125,6 +124,7 @@ footer {
                         "sidebar";
   max-width: 85rem;
   margin: 0 auto;
+  padding: 0 1.2rem;
 }
 
 @media (min-width: 55rem) {
@@ -139,6 +139,7 @@ footer {
 .area-sidebar {
   grid-area: sidebar;
   padding: 2.4rem 0 4.8rem;
+  text-align: center;
 }
 
 @media (min-width: 55rem) {
@@ -154,9 +155,11 @@ footer {
   width: 100%;
   max-width: 65rem;
   padding-top: 2.4rem;
-  padding-bottom: 4.8rem;
 }
 
+@media (min-width: 55rem) {
+  padding-bottom: 4.8rem;
+}
 /*
   3: Post Lists
 */  

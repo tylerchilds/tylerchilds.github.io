@@ -1,5 +1,5 @@
 ---
-layout: blog_by_cat
+layout: blog/by_cat
 cat: development
-permalink: /blog/cat/development/
+permalink: /blog/category/development/
 ---
