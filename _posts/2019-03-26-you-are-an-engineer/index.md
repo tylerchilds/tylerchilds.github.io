@@ -2,13 +2,12 @@
 layout: blog/post
 title:  "You are an engineer"
 date:   2019-03-26 00:01:00 -0800
-categories: asides
+categories: development
 permalink: /posts/you-are-an-engineer
 description: >
   Anyone that reads this post is a software engineer.
   Go ahead and read it to assume a new identity or
   be assured of the one you already have.
-author: tyler
 ---
 
 There's a lot of debate around what a software engineer is, what a software engineer does and what is or isn't a programming language.

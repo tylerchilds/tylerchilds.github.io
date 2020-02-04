@@ -2,25 +2,12 @@
 layout: blog/post
 title:  "Hello World"
 date:   2019-03-12 00:01:00 -0800
-categories: basics
+categories: development
 permalink: /posts/hello-world
 description: >
   Hello World is a common way programmers learn a new language.
   If you're brand new to web development or coding in general, this post is
   a straight to the point introduction.
-author: tyler
-demo:
-  height: 300px
-  key: demo
-  github_path: /examples/hello-world
-  tabs:
-    - url: /examples/hello-world/
-      title: Hello World
-      id: demo
-    # - url: /examples/hello-world/index.html
-    #   title: HTML
-    #   id: html-source
-    #   base_path_key: github
 ---
 
 To get started with web development, all you need is a web browser and a text editor. You're using a web browser right now to read this. If you're not using the latest version of Firefox, Chrome, Safari or Edge, I recommend downloading or updating to one of them. Personally, I prefer using Firefox or Chrome.
@@ -49,19 +36,32 @@ Using your text editor, create a new file called *helloworld.html*.
 
 In that file, enter the following HTML code:
 
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-   &lt;title&gt;Hello World&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Hello World&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+<pre><xmp><!DOCTYPE html>
+<html>
+  <head>
+    <!-- When viewing this example on a page, this will display on the tab -->
+    <title>Hello World</title>
+  </head>
+  <body>
+    <p>Hello World</p>
+  </body>
+</html></xmp></pre>
 
+<div class="u-hidden" id="hello-world-html">
+    <p>Hello World</p>
+</div>
 Then open it in your web browser and it'll look something like this:
 
-{% include components/browser.html config=page.demo %}
+
+<iframe id="hello-world-example"></iframe>
+<script type="text/javascript">
+    window.tychi.queues.flyFrames.push([
+        'hello-world-example',
+        {
+            markupIDs: ['hello-world-html']
+        }
+    ]);
+</script>
 
 If you double click an HTML file in a folder, it should open with your default browser. If that doesn't work or you want to try it with a different browser, right click the file and use "Open with" to select the browser you'd like to use.
 

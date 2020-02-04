@@ -2,26 +2,13 @@
 layout: blog/post
 title:  "Web Anatomy"
 date:   2019-03-19 00:01:00 -0800
-categories: basics
+categories: development
 permalink: /posts/web-anatomy
 featured: true
 description: >
   Every webpage is made up primarily of three technologies:
   Hypertext Markup Language (HTML), Cascading Style Sheets (CSS)
   and JavaScript (JS). When they're all combined they produce amazing user experiences.
-author: tyler
-demo:
-  height: 500px
-  key: demo
-  github_path: /examples/web-anatomy
-  tabs:
-    - url: /examples/web-anatomy/
-      title: Demo
-      id: demo
-    # - url: /examples/web-anatomy/index.html
-    #   title: HTML
-    #   id: html-source
-    #   base_path_key: github
 ---
 
 This post assumes you've got a web browser, a text editor, and can create an HTML Document. If that doesn't make sense, no worries, just go and check out the post titled [Hello World](/posts/hello-world).
@@ -59,7 +46,113 @@ Let's say this is for a client.
 
 _A bouncer for the world's smallest club with a max occupancy of 10 hired you to build an app so they can keep track of everyone in the club._ We'll need to make sure we never have a negative number of people in the club and we definitely can't have more than 10 otherwise the fire marshall will shut the club down.
 
-{% include components/browser.html config=page.demo %}
+<iframe id="web-anatomy-example"></iframe>
+<pre><xmp id="web-anatomy-example-html"><h1>Counter</h1>
+<p class="subtitle">
+  This counter allows you to keep track of the club's occupancy.
+</p>
+
+<!--
+  The aria-live attribute is for screen readers.
+  It will re-read this paragraph when it changes.
+-->
+<p class="headcount-paragraph" aria-live="polite">
+  The club currently has <strong id="headcount">0</strong> people.
+</p>
+
+<button class="counter-button" id="minusButton">
+  Minus 1
+</button>
+<button class="counter-button" id="addButton">
+  Add 1
+</button>
+
+<style type="text/css">
+  html {
+    background-color: #f9f9f9;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+
+  body {
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    font-size: 72px;
+    margin: 10px 0 20px 0;
+  }
+
+  .subtitle {
+    color: #555;
+  }
+
+  .headcount-paragraph {
+    font-size: 32px;
+  }
+
+  .counter-button {
+    width: 30%;
+    font-size: 16px;
+    padding: 10px;
+  }
+</style>
+
+<script type="text/javascript">
+  let count = 0;
+  const minimum = 0;
+  const maximum = 10;
+
+  const minusButton = document.getElementById('minusButton');
+  const addButton = document.getElementById('addButton');
+
+  const headcount = document.getElementById('headcount');
+
+  function updateCount(newCount){
+    count = newCount;
+
+    headcount.innerText = count;
+  }
+
+  function minus() {
+    const newCount = count - 1;
+
+    if(newCount >= minimum) {
+      updateCount(newCount);
+    }
+  };
+
+  function add(){
+    const newCount = count + 1;
+
+    if(newCount <= maximum) {
+      updateCount(newCount);
+    }
+  };
+
+  addButton.addEventListener('click', add);
+  minusButton.addEventListener('click', minus);
+</script></xmp></pre>
+<script type="text/javascript">
+    window.tychi.queues.flyFrames.push([
+        'web-anatomy-example',
+        {
+            markupIDs: ['web-anatomy-example-html']
+        }
+    ]);
+</script>
 
 ## Going Beyond
 When an HTML file is parsed by a browser, it's represented under the hood using the **Document Object Model** (DOM).The DOM is what CSS and JavaScript actually interface with when styling or manipulating your webpage. You don't need to know much about it, but it might be useful when learning to know that HTML Elements become DOM Nodes, so your JavaScript is actually interacting with these nodes.

@@ -2,22 +2,13 @@
 layout: blog/post
 title:  "Accessibility and Semantic HTML"
 date:   2019-04-19 00:01:00 -0800
-categories: basics
+categories: development
 permalink: /posts/accessibility-and-semantic-html
 description: >
   Accessibility is about making the content on your webpage to be
   enjoyed by as many people as possible. This post teaches
   some basics of accessibility using semantic HTML, which is the core
   of an accessible web page.
-author: tyler
-demo:
-  height: 500px
-  key: demo
-  github_path: /examples/accessibility-and-semantic-html/
-  tabs:
-    - url: /examples/accessibility-and-semantic-html/
-      title: Demo
-      id: demo
 ---
 
 ## Why you should care about Accessiblity
@@ -75,7 +66,97 @@ There are many different HTML tags, but to narrow down to a large handful, these
 
 This demo is modeled after the example above, with the header, navigation, two columns... etc.
 
-{% include components/browser.html config=page.demo %}
+<iframe id="ally-and-semantic-html-example"></iframe>
+
+<pre><xmp id="ally-and-semantic-html-html"><header>
+  <h1>Semantic HTML</h1>
+  <nav class="navigation">
+    <span class="nav-item">Navigation:</span>
+    <a href="#lists" class="nav-item">Lists</a>
+    <a href="https://duckduckgo.com" class="nav-item" target="_blank">Search</a>
+  </nav>
+</header>
+<section class="layout">
+  <main class="content">
+    <h2>Main Content area</h2>
+    <p>
+      Here we've got our main content area.
+    </p>
+    <a name="lists"></a>
+    <h3>Lists</h3>
+    <p>
+      We can show off lists
+    </p>
+    <h4>Cool movies</h4>
+    <ul>
+      <li>The Matrix</li>
+      <li>Armageddon</li>
+      <li>Cast Away</li>
+    </ul>
+    <h4>All Star Wars Movies ordered by Release</h4>
+    <ol>
+      <li>IV: A New Hope</li>
+      <li>V: Empire Strikes Back</li>
+      <li>VI: Return of the Jedi</li>
+      <li>Rogue One</li>
+    </ol>
+  </main>
+  <aside class="sidebar">
+    <h2>Aside</h2>
+    <p>
+      This is an aside, being used as a sidebar.
+    </p>
+  </aside>
+</section>
+<footer>
+  <h4>Footer</h4>
+  <p>Thanks for visiting this webpage. &copy;2019</p>
+</footer></xmp></pre>
+
+<pre><xmp id="ally-and-semantic-html-css">html {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.navigation {
+  line-height: 60px;
+  text-align: right;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.layout {
+  display: grid;
+  column-gap: 20px;
+  grid-template-areas: "sidebar content";
+  grid-template-columns: 1fr 3fr;
+}
+
+.content {
+  grid-area: content;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}</xmp></pre>
+
+<script type="text/javascript">
+    window.tychi.queues.flyFrames.push([
+        'ally-and-semantic-html-example',
+        {
+            markupIDs: ['ally-and-semantic-html-html'],
+            styleIDs: ['ally-and-semantic-html-css']
+        }
+    ]);
+</script>
 
 ### Going Beyond
 

@@ -54,6 +54,7 @@ form{
 
 iframe {
   display: block;
+  width: 100%;
 }
 
 pre,

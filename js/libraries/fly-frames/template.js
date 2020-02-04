@@ -5,8 +5,6 @@ export default function template(options) {
         html: '',
         ...options
     };
-    const cssURL = getBlobURL(params.css, 'text/css');
-    const jsURL = getBlobURL(params.js, 'text/css');
 
     const html = `<!DOCTYPE html>
         <html lang="en">
@@ -19,11 +17,15 @@ export default function template(options) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-touch-fullscreen" content="yes">
 
-        <link href="${cssURL}" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            ${params.css}
+        </style>
         </head>
         <body>
-            ${html}
-            <script type="javascript" src="${jsURL}"></script>
+            ${params.html}
+            <script type="text/javascript">
+                ${params.js}
+            </script>
         </body>
         </html>`;
 

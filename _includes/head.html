@@ -1,161 +1,169 @@
 <head>
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{% if page.title %}{{ page.title }}{% endif %} | {{ site.title }}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <title>{% if page.title %}{{ page.title }}{% endif %} | {{ site.title }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-	<style type="text/css">
-		html {
-			--base-font: 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
-			--monospace-font: 'Consolas', 'Monaco', 'Courier New', monospace;
+    <style type="text/css">
+            html {
+                --base-font: 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
+                --monospace-font: 'Consolas', 'Monaco', 'Courier New', monospace;
 
-			--heading: var(--base-font);
-			--body: var(--base-font);
-			--monospace: var(--monospace-font);
+                --heading: var(--base-font);
+                --body: var(--base-font);
+                --monospace: var(--monospace-font);
 
-			--font-size: 1.6rem;
-			--line-height: 2.4rem;
+                --font-size: 1.6rem;
+                --line-height: 2.4rem;
 
-			--font-size--small: 1.2rem;
-			--font-size--large: 2rem;
+                --font-size--small: 1.2rem;
+                --font-size--large: 2rem;
 
-			--breakpoint: 900px;
-			--gutter-width: 2.4rem;
-			--border-radius: 1.2rem;
+                --breakpoint: 900px;
+                --gutter-width: 2.4rem;
+                --border-radius: 1.2rem;
 
-			--primary:#216a9e;
-			--primary-dark: #184f76;
+                --primary:#216a9e;
+                --primary-dark: #184f76;
 
-			--link: #4076D4;
-			--link--visited: #9140D4;
-			--link--hover: var(--link);
-			--link--active: #D44076;
+                --link: #4076D4;
+                --link--visited: #9140D4;
+                --link--hover: var(--link);
+                --link--active: #D44076;
 
-			--gray1: #3c3c3d;
-			--gray2: #5a5a5b;
-			--gray3: #7d7d7e;
+                --gray1: #3c3c3d;
+                --gray2: #5a5a5b;
+                --gray3: #7d7d7e;
 
-			--gray4: #cdcdce;
-			--gray5: #dededf;
-			--gray6: #efeff0;
+                --gray4: #cdcdce;
+                --gray5: #dededf;
+                --gray6: #efeff0;
 
-			--white: #ffffff;
+                --white: #ffffff;
 
-			box-sizing: border-box;
-			font-size: 62.5%;
-			height: 100%;
-		}
-
-		@media screen and (min-width: 45rem){
-			html {
-				font-size: 78.125%;
-			}
-		}
-
-		.dark-theme {
-			--primary:#216a9e;
-			--primary-dark: #184f76;
-
-			--link: #4076D4;
-			--link--visited: #9140D4;
-			--link--hover: var(--link);
-			--link--active: #D44076;
-
-			--gray1: #efeff0;
-			--gray2: #5a5a5b;
-			--gray3: #7d7d7e;
-
-			--gray4: #cdcdce;
-			--gray5: #dededf;
-			--gray6: #efeff0;
-
-			--white: #000;
-		}
-
-		body {
-			background-color: var(--white);
-			box-sizing: border-box;
-			color: var(--gray1);
-			font-family: var(--base-font);
-			font-size: var(--font-size);
-			line-height: var(--line-height);
-			min-height: 100%;
-			position: relative;
-
-			margin: 0 auto;
-			max-width: 65rem;
-		}
-
-		header {
-			text-align: center;
-			margin: 1.2rem 1.2rem 2.4rem;
-		}
-
-		main {
-			margin: 0 1.2rem;
-		}
-
-		footer {
-			padding: 2.4rem 1.2rem;
-		}
-
-        .site-header {
-            display: grid;
-            grid-template-areas:
-                "sitebrand"
-                "sitenav";
-        }
-
-
-        @media (min-width: 55rem) {
-            .site-header {
-                grid-template-areas: "sitebrand sitenav";
+                box-sizing: border-box;
+                font-size: 62.5%;
+                height: 100%;
             }
-        }
 
-        .site-brand,
-        .site-nav {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-        }
+            @media screen and (min-width: 45rem){
+                html {
+                    font-size: 78.125%;
+                }
+            }
 
-        .site-brand {
-            grid-area: sitebrand;
-            padding: 0;
-        }
+            .dark-theme {
+                --primary:#216a9e;
+                --primary-dark: #184f76;
 
-        .site-nav {
-            grid-area: sitenav;
-        }
+                --link: #4076D4;
+                --link--visited: #9140D4;
+                --link--hover: var(--link);
+                --link--active: #D44076;
 
-        @media (min-width: 55rem) {
+                --gray1: #efeff0;
+                --gray2: #5a5a5b;
+                --gray3: #7d7d7e;
+
+                --gray4: #cdcdce;
+                --gray5: #dededf;
+                --gray6: #efeff0;
+
+                --white: #000;
+            }
+
+            body {
+                background-color: var(--white);
+                box-sizing: border-box;
+                color: var(--gray1);
+                font-family: var(--base-font);
+                font-size: var(--font-size);
+                line-height: var(--line-height);
+                min-height: 100%;
+                position: relative;
+
+                margin: 0 auto;
+                max-width: 65rem;
+            }
+
+            header {
+                text-align: center;
+                margin: 1.2rem 1.2rem 2.4rem;
+            }
+
+            main {
+                margin: 0 1.2rem;
+            }
+
+            footer {
+                padding: 2.4rem 1.2rem;
+            }
+
+            .site-header {
+                display: grid;
+                grid-template-areas:
+                    "sitebrand"
+                    "sitenav";
+            }
+
+
+            @media (min-width: 55rem) {
+                .site-header {
+                    grid-template-areas: "sitebrand sitenav";
+                }
+            }
+
+            .site-brand,
+            .site-nav {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
             .site-brand {
-                justify-content: flex-start;
+                grid-area: sitebrand;
+                padding: 0;
             }
 
             .site-nav {
-                justify-content: flex-end;
+                grid-area: sitenav;
             }
-        }
-		.nav-item-wrapper {
-			display: inline-block;
-		}
 
-		.nav-item {
-			display: inline-block;
-			padding: 1.2rem 2.4rem;
-		}
-	</style>
-	<link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
-	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
-	<link rel="stylesheet" href="{{ "/css/theme.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
-	{% if page.css %}
-		<link rel="stylesheet" href="{{ "/css/pages/" | prepend: site.baseurl }}{{ page.css }}?bustamove={{ site.cache_buster }}">
-	{% endif %}
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <script src="{{ "/js/critical.js" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}" type="module"></script>
+            @media (min-width: 55rem) {
+                .site-brand {
+                    justify-content: flex-start;
+                }
+
+                .site-nav {
+                    justify-content: flex-end;
+                }
+            }
+            .nav-item-wrapper {
+                display: inline-block;
+            }
+
+            .nav-item {
+                display: inline-block;
+                padding: 1.2rem 2.4rem;
+            }
+    </style>
+    <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
+    <link rel="stylesheet" href="{{ "/css/theme.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
+    {% if page.css %}
+    <link rel="stylesheet" href="{{ "/css/pages/" | prepend: site.baseurl }}{{ page.css }}?bustamove={{ site.cache_buster }}">
+    {% endif %}
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <script type="text/javascript">
+        (function() {
+            window.tychi = {
+                queues: {
+                    flyFrames: []
+                }
+            }
+        })();
+    </script>
 </head>

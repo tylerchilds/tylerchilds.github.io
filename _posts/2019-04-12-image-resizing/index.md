@@ -2,27 +2,12 @@
 layout: blog/post
 title:  "Image Resizing"
 date:   2019-04-12 00:01:00 -0800
-categories: features
+categories: development
 permalink: /posts/image-resizing
 description: >
   One of the things that really grinds my gears is trying to upload an image and then being told it needs to be smaller.
   This post covers how a website can dynamically resize an image to the size they need and also lightly covers
   Promises and asynchronous code.
-author: tyler
-demo:
-  height: 400px
-  key: demo
-  github_path: /examples/image-resizer
-  tabs:
-    - url: /examples/image-resizer/
-      title: Demo
-      id: demo
-    - url: /examples/image-resizer/image-resizer.js
-      title: image-resizer.js
-      id: js-source
-    - url: /examples/image-resizer/demo.js
-      title: demo.js
-      id: demo-source
 ---
 
 ## User Woes of Image Uploading
@@ -57,7 +42,166 @@ A lot of writing software is looking stuff up. 90% of that is figuring out what 
 
 For this demo, you can choose an image to resize. It'll show the original image next to the resized image. I've set the resized image's maximum width or height to be 480px and it'll try to be the same `MIME type` as the original, but `canvas` has some limitations.
 
-{% include components/browser.html config=page.demo %}
+<iframe id="image-resizing-example"></iframe>
+
+<div class="u-hidden" id="image-resizing-example-css-setup">
+      html {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      img {
+        max-width: 100%;
+        min-height: 300px;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .image-results {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+</div>
+
+<div class="u-hidden" id="image-resizing-example-html-setup"><div class="container">
+    <input type="file" id="image-input" accept="image/*" />
+
+    <section class="image-results hidden">
+      <div>
+        <h3>Original</h3>
+        <img id="original" />
+      </div>
+      <div>
+        <h3>Resized</h3>
+        <img id="resized" />
+      </div>
+    </section>
+</div></div>
+
+<pre><code id="image-resizing-example-js-library">async function getImageElement(imageSource) {
+  return await new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject({ reason: 'getImageElement: Image Load Error' });
+    image.src = imageSource;
+  })
+}
+
+async function getMime(imageSource) {
+  const image = await fetch(imageSource);
+  return (await image.blob()).type;
+};
+
+function getResizedDimensions(elem, maxDimensionSize) {
+  // This code has high complexity, don't dwell on it too much
+  // I wrote it like this to keep what really matters more simplified
+  const 
+    [ bigSide, smallSide ] = elem.width > elem.height ?
+    ['width', 'height']:
+    ['height', 'width'];
+
+  // if big side is smaller than our max dimension, then pass dimensions through
+  if(maxDimensionSize > elem[bigSide] || !maxDimensionSize){
+    return {
+      [bigSide]: elem[bigSide],
+      [smallSide]: elem[smallSide]
+    }
+  }
+
+  return {
+    [bigSide]: maxDimensionSize,
+    [smallSide]: maxDimensionSize / elem[bigSide] * elem[smallSide]
+  }
+}
+
+function createCanvasImage(imageElement, dimensions) {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = dimensions.width;
+  canvas.height = dimensions.height;
+
+  ctx.drawImage(imageElement, 0, 0, dimensions.width, dimensions.height);
+
+  return canvas;
+}
+
+async function loadFile(file) {
+  console.log(file)
+  return await new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+
+    fileReader.onload = (e) => resolve(e.target.result);
+    fileReader.onabort = () => reject({ reason: 'loadFile: File Read Aborted' });
+    fileReader.onerror = () => reject({ reason: 'loadFile: File Read Error' });
+
+    fileReader.readAsDataURL(file);
+  });
+}
+
+async function resizeImage(imageSource, maxDimensionSize) {
+  const mime = await getMime(imageSource);
+  const imageElement = await getImageElement(imageSource);
+  const dimensions = getResizedDimensions(imageElement, maxDimensionSize);
+
+  const image = createCanvasImage(imageElement, dimensions);
+
+  return {
+    blob: await new Promise((resolve) => {
+      image.toBlob(blob => resolve(blob), mime, 1);
+    }),
+    dataURL: image.toDataURL(mime, 1)
+  }
+}
+
+async function getResizedImageFromFile(file, maxDimensionSize) {
+  return await new Promise(async (resolve, reject) => {
+    const imageSource = await loadFile(file).catch((e) => reject(e));
+    const resizedImage = await resizeImage(imageSource, maxDimensionSize).catch(((e) => reject(e)));
+
+    resolve(resizedImage);
+  });
+}</code></pre>
+
+<pre><code id="image-resizing-example-js-demo">const elements = {
+    imageInput: document.getElementById("image-input"),
+    results: document.querySelector(".image-results"),
+    original: document.getElementById("original"),
+    resized: document.getElementById("resized"),
+}
+
+async function onImageSelection() {
+    const file = this.files && this.files[0];
+
+    const originalImage = await loadFile(file).catch(console.error);
+    const resizedImage = await getResizedImageFromFile(file, 480).catch(console.error);
+
+    elements.original.src = originalImage;
+    elements.resized.src = resizedImage.dataURL;
+
+    console.log('resized image:', resizedImage);
+
+    elements.results.classList.remove('hidden');
+}
+
+elements.imageInput.addEventListener("change", onImageSelection);</code></pre>
+<script type="text/javascript">
+    window.tychi.queues.flyFrames.push([
+        'image-resizing-example',
+        {
+            markupIDs: ['image-resizing-example-html-setup'],
+            styleIDs: ['image-resizing-example-css-setup'],
+            scriptIDs: ['image-resizing-example-js-library', 'image-resizing-example-js-demo']
+        }
+    ]);
+</script>
 
 Try to run the code locally on your computer and play with the code. A few suggestions to try out:
 

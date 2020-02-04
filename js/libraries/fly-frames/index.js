@@ -1,6 +1,6 @@
 import template from './template.js';
 
-export default function flyFrame(iframe, options) {
+export default function flyFrame(iframeID, options) {
     const params =  {
         markupIDs: [],
         scriptIDs: [],
@@ -8,16 +8,52 @@ export default function flyFrame(iframe, options) {
         ...options
     };
 
+    const postMessageScript = `
+        window.shareHeight = function shareHeight() {
+            const message = {
+                height: document.body.scrollHeight,
+                iframeID: '${iframeID}'
+            };
+            window.parent.postMessage(message, "*");
+        }
+
+        window.onload = window.shareHeight;
+    `;
+
     const templateConfig = {
-        css: styleIDs.reduce(concat, ''),
-        js: scriptIDs.reduce(concat, ''),
-        html: markupIDs.reduce(concat, ''),
+        css: params.styleIDs.reduce(concatText, ''),
+        js: params.scriptIDs.reduce(concatText, postMessageScript),
+        html: params.markupIDs.reduce(concatHtml, ''),
     }
 
-    document.getElementById(iframeId).src = template(templateConfig);
+    document.getElementById(iframeID).src = template(templateConfig);
 }
 
-function concat(memo, id) {
+function concatText(memo, id) {
     const content = document.getElementById(id);
-    memo += content.innerHTML;
+    if(content) {
+        memo += content.innerText;
+    }
+    return memo;
 }
+
+function concatHtml(memo, id) {
+    const content = document.getElementById(id);
+    if(content) {
+        memo += content.innerHTML;
+    }
+    return memo;
+}
+
+/* Event Listener for post message */
+
+window.addEventListener('message', receiveMessage, false);
+
+function receiveMessage({data}){
+    const iframe = document.getElementById(data.iframeID);
+    if(iframe) {
+        iframe.style.height = `${data.height + 50}px`;
+        iframe.style.maxHeight = '75vh';
+    }
+}
+

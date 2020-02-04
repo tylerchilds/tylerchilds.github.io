@@ -2,28 +2,13 @@
 layout: blog/post
 title:  "The Perfect Button"
 date:   2019-04-03 00:01:00 -0800
-categories: features
+categories: development
 permalink: /posts/the-perfect-button
 description: >
   If you've ever worked in a shared codebase with more than a handful of
   engineers, you've probably come across at least a few buttons that look the same
   but are very different once you get to know them. The Perfect Button will help solve
   or help you prevent this problem in a few quick lines of CSS.
-author: tyler
-demo:
-  height: 400px
-  key: demo
-  github_path: /examples/the-perfect-button
-  tabs:
-    - url: /examples/the-perfect-button/
-      title: Demo
-      id: demo
-    - url: /examples/the-perfect-button/the-perfect-button.css
-      title: CSS
-      id: css-source
-    - url: /examples/the-perfect-button/variations.html
-      title: Variations
-      id: variations
 ---
 
 ## The Lifecycle of Styling a Button
@@ -50,7 +35,184 @@ Let's break down exactly what our perfect button is going to need to do.
 
 ### Example
 
-{% include components/browser.html config=page.demo %}
+<iframe id="perfect-button-example"></iframe>
+
+<div class="u-hidden" id="perfect-button-html">
+    <div class="container">
+      <button class="button">
+        The Perfect Button
+      </button>
+
+      <input type="submit" class="button -outlined" value="Outlined">
+
+      <input type="button" class="button -secondary" value="Secondary">
+
+      <a href="#" class="button -link">Link</a>
+
+      <button class="button" disabled>
+        Disabled
+      </button>
+
+      <button class="button -small -outlined">
+        Small Outlined
+      </button>
+
+      <button class="button -large -secondary">
+        Large Secondary
+      </button>
+    </div>
+
+    <div class="container">
+      <a href="#" class="button -link">
+        One Line Link
+      </a>
+      <button class="button -outlined">
+        A Two Line<br />Button
+      </button>
+
+      <button class="button">
+        A Three<br/>Line<br />Button
+      </button>
+
+    </div>
+</div>
+
+<pre id="perfect-button-css-setup" class="u-hidden">
+      html {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
+</pre>
+
+<pre><xmp id="perfect-button-css">.button {
+  --border-color: transparent;
+  --border-color-hover: transparent;
+  --border-radius: 4px;
+  --border-thickness: 2px;
+  --background-color: #216a9e;
+  --background-color-hover: #184f76;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --margin: 5px;
+  --min-height: 48px;
+  --padding: 10px 20px;
+  --text-color: #fff;
+  --text-color-hover: #fff;
+
+  align-items: center;
+  align-content: center;
+  background-color: var(--background-color);
+  border: var(--border-thickness) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  color: var(--text-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--font-size);
+  justify-content: center;
+  line-height: var(--line-height);
+  min-height: var(--min-height);
+  margin: var(--margin);
+  max-width: 100%;
+  padding: var(--padding);
+  text-align: center;
+  transition-duration: 250ms;
+  transition-property: background-color, border-color, color;
+  user-select: none;
+  width: auto;
+  vertical-align: middle;
+}
+
+.button:link,
+.button:visited {
+  color: var(--text-color);
+}
+
+.button:focus,
+.button:hover {
+  background-color: var(--background-color-hover);
+  border-color: var(--border-color-hover);
+  color: var(--text-color-hover);
+}
+
+.button:focus {
+  outline: 2px dotted #999;
+  outline-offset: 2px;
+}
+
+.button:active {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.button:disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.button::-moz-focus-inner {
+  border: 0;
+}
+
+.button.-outlined {
+  --background-color: transparent;
+  --background-color-hover: #184f76;
+  --border-color: #216a9e;
+  --border-color-hover: #184f76;
+  --text-color: #216a9e;
+  --text-color-hover: #fff;
+}
+
+.button.-secondary {
+  --background-color: #ccc;
+  --background-color-hover: #999;
+  --border-color: #ccc;
+  --border-color-hover: #999;
+  --text-color: #333;
+  --text-color-hover: #333;
+}
+
+.button.-link {
+  --background-color: transparent;
+  --background-color-hover: transparent;
+  --border-color: transparent;
+  --border-color-hover: transparent;
+  --text-color: #216a9e;
+  --text-color-hover: #184f76;
+}
+
+.button.-small {
+  --border-thickness: 1px;
+  --font-size: 12px;
+  --line-height: 1.5;
+  --min-height: 32px;
+  --padding: 4px 8px;
+}
+
+.button.-large {
+  --border-thickness: 4px;
+  --font-size: 32px;
+  --line-height: 1.5;
+  --min-height: 72px;
+  --padding: 20px 40px;
+}</xmp></pre>
+
+<script type="text/javascript">
+    window.tychi.queues.flyFrames.push([
+        'perfect-button-example',
+        {
+            markupIDs: ['perfect-button-html'],
+            styleIDs: ['perfect-button-css-setup', 'perfect-button-css']
+        }
+    ]);
+</script>
 
 ### Explanation
 
