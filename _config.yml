@@ -9,17 +9,17 @@
 title: Tyler Childs
 email: tylerwchilds@gmail.com
 description: >
-  This is the final destination for my personal website.
-  It's as complex as it will ever need to be and
-  there are better things for me to do, to learn and explore.
-  There's an entire world out there beyond the boxes
-  we tend to put everything into
+    Personal and Professional Website for Tyler Childs, a Web Designer &amp;
+    Developer, currently employed by Netflix and living in the
+    San Francisco Bay Area. Passionate about CSS and building stellar user
+    experiences, always looking to simplify and streamline anything.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tylerchilds.com" # the base hostname & protocol for your site
-tagline: Software Engineer
+tagline: Web Designer &amp; Developer
 
+cache_buster: 20200204_1
 # Build settings
 markdown: kramdown
 
-sass:
-  style: compressed
+plugins:
+  - jekyll-sitemap
