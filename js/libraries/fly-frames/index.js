@@ -53,7 +53,6 @@ function receiveMessage({data}){
     const iframe = document.getElementById(data.iframeID);
     if(iframe) {
         iframe.style.height = `${data.height + 50}px`;
-        iframe.style.maxHeight = '75vh';
     }
 }
 

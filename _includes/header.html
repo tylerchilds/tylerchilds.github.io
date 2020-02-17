@@ -12,13 +12,9 @@
         {% assign node_url_parts_size = node_url_parts | size %}
         {% if node_url_parts_size == 2 %}
           {% if page.url == node.url %}
-            <div class="nav-item-wrapper">
-              <a href='{{node.url}}' class='nav-item active {{node.nav-class}}'>{{node.title}}</a>
-            </div>
+            <a href='{{node.url}}' class='nav-item active {{node.nav-class}}'>{{node.title}}</a>
           {% else %}
-            <div class="nav-item-wrapper">
-              <a href='{{node.url}}' class='nav-item {{node.nav-class}}'>{{node.title}}</a>
-            </div>
+            <a href='{{node.url}}' class='nav-item {{node.nav-class}}'>{{node.title}}</a>
           {% endif %}
         {% endif %}
       {% endif %}
