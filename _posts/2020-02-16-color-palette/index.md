@@ -30,7 +30,7 @@ Red, Flame, Orange, Amber, Yellow, Chartruese, Green, Aqua, Blue, Indigo, Violet
 
 
 <iframe id="color-palette-example"></iframe>
-<div class="u-hidden" id="color-palette-example-html"><style type="text/css">
+<div class="u-hidden" id="color-palette-example-css">
     .color-row {
         display: flex;
         justify-content: space-around;
@@ -501,7 +501,8 @@ Red, Flame, Orange, Amber, Yellow, Chartruese, Green, Aqua, Blue, Indigo, Violet
     .silver7 {
         background: var(--silver7);
     }
-</style>
+</div>
+<div id="color-palette-example-html">
     <div class="color-row">
         <div class="color red1"></div>
         <div class="color red2"></div>
@@ -637,7 +638,8 @@ Red, Flame, Orange, Amber, Yellow, Chartruese, Green, Aqua, Blue, Indigo, Violet
     window.tychi.queues.flyFrames.push([
         'color-palette-example',
         {
-            markupIDs: ['color-palette-example-html']
+            markupIDs: ['color-palette-example-html'],
+            styleIDs: ['color-palette-example-css']
         }
     ]);
 </script>

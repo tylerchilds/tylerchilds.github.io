@@ -17,7 +17,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tylerchilds.com" # the base hostname & protocol for your site
 tagline: Web Designer &amp; Developer
 
-cache_buster: 20200204_1
+cache_buster: 20200217_1
 # Build settings
 markdown: kramdown
 
